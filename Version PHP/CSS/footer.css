@@ -1,0 +1,318 @@
+/* Flèche pour remonter en haut de la page */
+.fleche {
+    position: fixed;
+    /* Positionnement */
+    bottom: 2%;
+    /* Distance depuis le bas */
+    right: 1%;
+    /* Distance depuis la droite */
+    z-index: 1000;
+    /* Assure qu'elle soit visible au-dessus */
+    cursor: pointer;
+    /* Pour indiquer que c'est cliquable */
+    transition: transform 0.3s, color 0.3s;
+    /* Animation */
+}
+
+.material-symbols-outlined {
+    color: grey;
+    /* Couleur de base */
+    transition: color 0.3s ease;
+    /* Transition fluide pour la couleur */
+    transform: scale(1.5);
+    /* Légèrement plus grand au survol */
+}
+
+.fleche:hover .material-symbols-outlined {
+    color: #ff6f00;
+    /* Couleur vive au survol */
+    transform: scale(2);
+    /* Légèrement plus grand au survol */
+}
+
+/* Bas de page */
+footer {
+    background-color: rgb(179, 171, 171);
+    /* Couleur de fond */
+    font-size: 70%;
+    /* Taille du texte */
+    text-align: center;
+    /* Centrer */
+    padding: 1rem;
+    /* Espacement interne */
+    margin-top: 5%;
+    /* Espacement externe */
+    width: 100%;
+    /* Largeur pleine */
+    position: relative;
+    /* Nécessaire pour le positionnement absolu des enfants */
+    display: flex;
+    /* Flexbox */
+    flex-direction: column;
+    /* Organisation verticale */
+    justify-content: space-between;
+    /* Espacement entre les éléments */
+    align-items: center;
+    /* Centre horizontalement */
+}
+
+.basDePage {
+    font-size: 120%;
+}
+
+/* Réseaux sociaux */
+.example-1 {
+    display: flex;
+    /* Organise les éléments */
+    justify-content: center;
+    /* Centre horizontalement les icônes */
+    align-items: center;
+    /* Centre verticalement les icônes */
+    font-weight: bolder;
+    /* Texte en gras */
+    background-color: #000;
+    /* Fond noir */
+    border-radius: 30px;
+    /* Coins arrondis */
+    padding: 20px;
+    /* Espacement interne */
+    height: 80%;
+    /* Hauteur */
+    width: 80%;
+    /* Largeur */
+    margin: auto;
+    /* Centre si nécessaire */
+}
+
+/* Conteneur principal pour les éléments d'icônes dans .example-1 */
+.example-1 .icon-content {
+    margin: 0 10px;
+    /* Espace horizontal de 10px de chaque côté */
+    position: relative;
+    /* Positionnement */
+    font-weight: bolder;
+    /* Texte en gras */
+}
+
+/* Style pour les infobulles (tooltip) */
+.example-1 .icon-content .tooltip {
+    position: absolute;
+    /* Positionnement */
+    top: -30px;
+    /* 30px au-dessus du parent */
+    left: 50%;
+    /* Centré horizontalement */
+    transform: translateX(-50%);
+    /* Légèrement plus grand au survol */
+    background-color: #fff;
+    /* Fond blanc */
+    color: #000;
+    /* Couleur texte */
+    padding: 6px 10px;
+    /* Espacement */
+    border-radius: 5px;
+    /* Coins arrondis */
+    opacity: 0;
+    /* Opacité */
+    visibility: hidden;
+    /* Rend invisible */
+    font-size: 14px;
+    /* Taille de la police */
+    transition: all 0.3s ease;
+    /* Animation */
+    font-weight: bolder;
+    /* Texte en gras */
+}
+
+/* Affiche une infobulle (tooltip) lors du survol de .icon-content */
+.example-1 .icon-content:hover .tooltip {
+    opacity: 1;
+    /* Opacité */
+    visibility: visible;
+    /* Positionne l'infobulle au-dessus de l'élément */
+    top: -50px;
+    /* Ajuste la distance verticale pour l'affichage de l'infobulle */
+}
+
+/* Style pour les liens dans .example-1 .icon-content */
+.example-1 .icon-content .link {
+    display: flex;
+    /* Organise les éléments */
+    justify-content: center;
+    /* Centre horizontalement */
+    align-items: center;
+    /* Centre verticalement */
+    width: 50px;
+    /* Largeur */
+    height: 50px;
+    /* Hauteur */
+    border-radius: 50%;
+    /* Coins arrondis */
+    color: #fff;
+    /* Icône blanche */
+    background-color: #000;
+    /* Fond noir */
+    transition: all 0.3s ease-in-out;
+    /* Animation */
+    font-weight: bolder;
+    /* Texte en gras */
+}
+
+/* Effet de survol sur les liens dans .example-1 .icon-content */
+.example-1 .icon-content .link:hover {
+    /* Ajoute une ombre autour de l'élément lors du survol */
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+    /* Ombre légère avec une opacité de 12% */
+}
+
+/* Style appliqué aux éléments <svg> dans les liens */
+.example-1 .icon-content .link svg {
+    width: 30px;
+    /* Largeur des icônes SVG */
+    height: 30px;
+    /* Hauteur des icônes SVG*/
+    fill: #fff;
+    /* Remplit les icônes avec une couleur blanche */
+    /* Cette règle est utile pour des icônes monochromes */
+}
+
+/* Style spécifique pour le lien Instagram au survol */
+.example-1 .icon-content .link[data-social="instagram"]:hover {
+    /* Ajoute une image de fond spécifique à Instagram */
+    background: center no-repeat url("../Images/Fond_insta.png");
+    /* Centre l'image et évite la répétition */
+    background-size: cover;
+    /* Remplit entièrement l'arrière-plan du lien */
+}
+
+/* Style spécifique pour le lien TikTok au survol */
+.example-1 .icon-content .link[data-social="tiktok"]:hover {
+    /* Applique un dégradé spécifique à TikTok */
+    background: linear-gradient(45deg,
+            /* Angle du dégradé */
+            rgba(0, 255, 242, 1) 20%,
+            /* Couleur turquoise */
+            rgb(64, 64, 64) 50%,
+            /* Gris foncé */
+            rgba(255, 0, 0, 1) 80%
+            /* Rouge */
+        );
+    /* Le dégradé imite les couleurs caractéristiques de TikTok */
+}
+
+/* Responsive avec Media Queries */
+/* Tablettes */
+@media (max-width: 1024px) {
+    .fleche {
+        display: none;
+    }
+
+    footer {
+        font-size: 0.7rem;
+        /* Réduit la taille du texte */
+    }
+
+    /* Réseaux sociaux */
+    .example-1 {
+        height: 60%;
+        /* Hauteur réduite pour s'adapter à l'écran */
+        width: 90%;
+        /* Largeur plus petite */
+        padding: 10px;
+        /* Réduit l'espacement interne */
+    }
+
+    /* Affichage fixe du rond de couleur sur les petits écrans */
+    .example-1 .icon-content .link[data-social="instagram"] {
+        /* Ajoute une image de fond spécifique à Instagram */
+        background: center no-repeat url("../Images/Fond_insta.png");
+        /* Centre l'image et évite la répétition */
+        background-size: cover;
+        /* Remplit entièrement l'arrière-plan du lien */
+    }
+
+    /* Style spécifique pour le lien TikTok au survol */
+    .example-1 .icon-content .link[data-social="tiktok"] {
+        /* Applique un dégradé spécifique à TikTok */
+        background: linear-gradient(45deg,
+                /* Angle du dégradé */
+                rgba(0, 255, 242, 1) 20%,
+                /* Couleur turquoise */
+                rgb(64, 64, 64) 50%,
+                /* Gris foncé */
+                rgba(255, 0, 0, 1) 80%
+                /* Rouge */
+            );
+        /* Le dégradé imite les couleurs caractéristiques de TikTok */
+    }
+
+    /* Désactive l'affichage des infobulles sur les tablettes et smartphones */
+    .example-1 .icon-content .tooltip {
+        opacity: 0;
+        visibility: hidden;
+        /* Les infobulles restent invisibles */
+    }
+
+    .example-1 .icon-content .link:hover {
+        box-shadow: none;
+        /* Enlève l'ombre au survol sur tablette */
+    }
+}
+
+/* Smartphones */
+@media (max-width: 768px) {
+    .fleche {
+        display: none;
+    }
+
+    footer {
+        font-size: 0.5rem;
+        /* Taille du texte encore plus petite */
+    }
+
+    /* Réseaux sociaux */
+    .example-1 {
+        height: 50%;
+        /* Hauteur réduite davantage pour les petits écrans */
+        width: 80%;
+        /* Largeur encore plus petite */
+        padding: 8px;
+        /* Réduit l'espacement interne */
+    }
+
+    /* Affichage fixe du rond de couleur sur les petits écrans */
+    .example-1 .icon-content .link[data-social="instagram"] {
+        /* Ajoute une image de fond spécifique à Instagram */
+        background: center no-repeat url("../Images/Fond_insta.png");
+        /* Centre l'image et évite la répétition */
+        background-size: cover;
+        /* Remplit entièrement l'arrière-plan du lien */
+    }
+
+    /* Style spécifique pour le lien TikTok au survol */
+    .example-1 .icon-content .link[data-social="tiktok"] {
+        /* Applique un dégradé spécifique à TikTok */
+        background: linear-gradient(45deg,
+                /* Angle du dégradé */
+                rgba(0, 255, 242, 1) 20%,
+                /* Couleur turquoise */
+                rgb(64, 64, 64) 50%,
+                /* Gris foncé */
+                rgba(255, 0, 0, 1) 80%
+                /* Rouge */
+            );
+        /* Le dégradé imite les couleurs caractéristiques de TikTok */
+    }
+
+    /* Désactive l'affichage des infobulles sur les tablettes et smartphones */
+    .example-1 .icon-content .tooltip {
+        opacity: 0;
+        visibility: hidden;
+        /* Les infobulles restent invisibles */
+    }
+
+    .example-1 .icon-content .link:hover {
+        box-shadow: none;
+        /* Enlève l'ombre au survol sur smartphone */
+    }
+}

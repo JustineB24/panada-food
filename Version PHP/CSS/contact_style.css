@@ -1,0 +1,161 @@
+/* Formulaire */
+.form {
+    display: flex;
+    /* Aligner les éléments */
+    flex-direction: column;
+    /* Alignés verticalement */
+    align-self: center;
+    /* Centre */
+    font-family: inherit;
+    /* Police définie dans l'élément parent */
+    gap: 10px;
+    /* Espace entre élément */
+    padding-inline: 2em;
+    /* Marges intérieures gauche et droite */
+    padding-bottom: 0.4em;
+    /* Marge intérieure inférieure */
+    background-color: #171717;
+    /* Couleur de fond */
+    border-radius: 20px;
+    /* Coins arrondis */
+    max-width: 600px;
+    /* Largeur maximale */
+    margin-top: 10%;
+    /* Marge au dessus */
+}
+
+/* Titre du formulaire */
+.form-heading {
+    text-align: center;
+    /* Centre le texte */
+    margin: 2em;
+    /* Espace autour du titre */
+    color: #ff692e;
+    /* Couleur */
+    font-size: 1.2em;
+    /* Taille de police */
+    background-color: transparent;
+    /* Fond */
+    align-self: center;
+    /* Centrer */
+}
+
+/* Champs de formulaire */
+.form-field {
+    display: flex;
+    /* Aligner les éléments */
+    align-items: center;
+    /* Aligne les éléments */
+    justify-content: center;
+    /* Centrer */
+    gap: 0.5em;
+    /* Espace entre les éléments */
+    border-radius: 10px;
+    /* Coins arrondis */
+    padding: 0.6em;
+    /* Espace intérieur */
+    border: none;
+    /* Bordures */
+    outline: none;
+    /* Supprime l’ombre */
+    color: white;
+    /* Couleur */
+    background-color: #171717;
+    /* Couleur du fond */
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+    /* Ombre */
+}
+
+/* Champs de saisie */
+.input-field {
+    background: none;
+    /* Couleur de fond */
+    border: none;
+    /* Bordures */
+    outline: none;
+    /* Bordures */
+    width: 100%;
+    /* Largeur */
+    color: #ccd6f6;
+    /* Couleur */
+    padding-inline: 1em;
+    /* Marges intérieures gauche et droite */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* Police d'écriture */
+    font-size: 100%;
+    /* Taille du texte */
+}
+
+/* Bouton d’envoi */
+.sendMessage-btn {
+    cursor: pointer;
+    /* Curseur */
+    margin-bottom: 3em;
+    /* Espace en bas */
+    padding: 1em;
+    /* Espace intérieur */
+    border-radius: 10px;
+    /* Coins arrondis */
+    border: none;
+    /* Bordures */
+    outline: none;
+    /* Ombre */
+    background-color: transparent;
+    /* Fond */
+    color: #ff692e;
+    /* Couleur */
+    font-weight: bold;
+    /* Texte en gras */
+    outline: 1px solid #ff0000;
+    /* Bordure */
+    transition: all ease-in-out 0.3s;
+    /* Animation */
+    width: 500px;
+    /* Largeur */
+    height: 50px;
+    /* Hauteur */
+}
+
+.sendMessage-btn:hover {
+    transition: all ease-in-out 0.3s;
+    /* Animation */
+    background-color: #ff831e;
+    /* Couleur de fond */
+    color: #000;
+    /* Couleur */
+    cursor: pointer;
+    /* Curseur */
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+    /* Ombre */
+}
+
+/* Cadres du formulaire */
+.form-card1 {
+    background-image: linear-gradient(163deg, #ff0000 0%, #ff9900 100%);
+    /* Dégradé */
+    border-radius: 22px;
+    /* Coins arrondis */
+    transition: all 0.3s;
+    /* Transition */
+    max-width: 600px;
+    /* Largeur maximale */
+}
+
+.form-card1:hover {
+    box-shadow: 0px 0px 30px 1px rgba(255, 0, 0, 0.3);
+    /* Ajoute une ombre rouge subtile au survol. */
+}
+
+.form-card2 {
+    border-radius: 0;
+    /* Coins */
+    transition: all 0.2s;
+    /* Animation */
+}
+
+.form-card2:hover {
+    transform: scale(0.98);
+    /* Réduit la taille au survol. */
+    border-radius: 20px;
+    /* Coins arrondis */
+}

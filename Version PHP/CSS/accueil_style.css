@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik+Mono+One&display=swap');
+
+/* Conteneur principal pour le titre et le logo */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 5%;
+    text-align: center;
+}
+
+/* Ajustement du titre */
+.header-container h1 {
+    margin-left: 20%;
+    font-size: 7rem;
+    text-transform: uppercase;
+}
+
+/* Ajustement du logo */
+.header-container #logo {
+    width: 50%;
+    max-width: 300px;
+    height: auto;
+    margin-right: 20%;
+}
+
+h1 {
+    font-family: "Rubik Mono One";
+}
+
+/* Classe food avec des barres autour */
+.food {
+    display: inline-block;
+    font-size: 4rem;
+    position: relative;
+    padding: 0 20px;
+    /* Espacement autour de "Food" */
+}
+
+.food::before,
+.food::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    width: 50%;
+    height: 2px;
+    /* Épaisseur des barres */
+    background-color: rgb(87, 87, 87);
+    /* Couleur des barres */
+}
+
+/* Barre gauche */
+.food::before {
+    padding: 5px;
+    left: 0;
+    transform: translateX(-100%);
+}
+
+/* Barre droite */
+.food::after {
+    padding: 5px;
+    right: 0;
+    transform: translateX(100%);
+}
+
+/* Carte Google Maps */
+iframe {
+    display: block;
+    /* Elément de type bloc. */
+    margin: 20px auto;
+    /* Centre l'iframe */
+    width: 600px;
+    /* Largeur */
+    height: 450px;
+    /* Hauteur */
+    border: none;
+    /* Bordure */
+}
+
+/* Ligne séparatrice */
+hr {
+    width: 30%;
+    /* Largeur */
+    background-color: rgb(255, 39, 0);
+    /* Couleur */
+    height: 3px;
+    /* Hauteur */
+    border: none;
+    /* Retirer la bordure */
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#separe {
+    background-color: rgb(87, 87, 87);
+    /* Couleur */
+    width: 90%;
+    /* Largeur */
+    height: 5px;
+    border: none;
+}
+
+/* Modes de paiement et infos pratiques */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Espacement entre les lignes */
+    text-align: center;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: space-around;
+    /* Répartir uniformément les éléments */
+    gap: 10px;
+    /* Espacement entre les colonnes */
+    margin-top: 5%;
+}
+
+.flex-item {
+    flex: 1;
+    /* Les items prennent la même largeur */
+    font-weight: bold;
+    font-size: 150%;
+    /* Taille de la police */
+}
+
+/* Images */
+.image {
+    width: 30%;
+}
+
+/* Bouton de contact */
+.contactButton {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 1) 15%, rgba(103, 6, 6, 1) 50%, rgba(255, 0, 0, 1) 80%);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0.45em 4em 0.45em 1em;
+    font-size: 120%;
+    border-radius: 0.9em;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    position: relative;
+    width: 4rem;
+    height: 2em;
+    margin: auto;
+    margin-top: 5%;
+}
+
+#lienContact {
+    color: white;
+}
+
+.iconButton {
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #ff3c00;
+    right: 0.3em;
+    transition: all 0.3s;
+}
+
+.contactButton:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em #ff561f;
+}
+
+.contactButton:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em #ff561f;
+}
+
+/* Responsive avec Media Queries */
+/* Tablettes */
+@media (max-width: 1024px) {
+
+    /* Titre de la page */
+    .header-container h1 {
+        font-size: 3rem;
+        margin-left: 10%;
+    }
+
+    /* Logo du restaurant */
+    .header-container #logo {
+        width: 30%;
+        max-width: 300px;
+        /* Garde une limite supérieure */
+        height: auto;
+        /* Conserve les proportions */
+        padding-bottom: 20px;
+        margin-right: 10%;
+    }
+
+    .traitGauche {
+        border-left: 5px solid black;
+        margin-left: 5%;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 768px) {
+
+    /* Conteneur principal pour le titre et le logo */
+    .header-container {
+        display: flex;
+        flex-direction: column;
+        /* Empile les éléments */
+        align-items: center;
+        /* Centre horizontalement */
+        text-align: center;
+        /* Centre le texte */
+    }
+
+    /* Titre de la page */
+    .header-container h1 {
+        font-size: 2.5rem;
+        margin-left: 0;
+        /* Supprime les marges inutiles */
+        margin-bottom: 1rem;
+        /* Ajoute un espacement sous le titre */
+    }
+
+    /* Logo du restaurant */
+    .header-container #logo {
+        width: 50%;
+        max-width: 300px;
+        /* Garde une limite supérieure */
+        height: auto;
+        /* Conserve les proportions */
+        margin-right: 0%;
+    }
+
+    .traitGauche {
+        border-left: none;
+        /* Supprime la bordure */
+        margin-left: 0;
+        /* Réinitialise la marge */
+    }
+}
+
+/* Conteneur principal de la galerie */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Colonnes flexibles */
+    gap: 20px;
+    /* Espace entre les images */
+    padding: 20px;
+    background-color: #f8f9fa;
+    /* Fond doux pour contraster */
+    border-radius: 10px;
+    /* Bords arrondis pour le conteneur */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Légère ombre */
+}
+
+/* Style des images */
+.gallery .pouik {
+    width: 100%;
+    /* S'adapte à la largeur de la colonne */
+    height: auto;
+    /* Préserve les proportions */
+    border-radius: 8px;
+    /* Coins arrondis pour les images */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    /* Ombre sous les images */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Effets d'animation */
+}
+
+/* Effet au survol des images */
+.gallery .pouik:hover {
+    transform: scale(1.05);
+    /* Zoom léger */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    /* Accentue l'ombre */
+}

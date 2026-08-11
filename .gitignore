@@ -1,0 +1,6 @@
+# Poste de travail
+.DS_Store
+.idea/
+
+# Réglages locaux d'agent
+.claude/settings.local.json

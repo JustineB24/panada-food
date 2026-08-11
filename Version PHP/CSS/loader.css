@@ -1,0 +1,95 @@
+/* Conteneur */
+.container {
+    display: flex;
+    /* Aligne les éléments */
+    justify-content: center;
+    /* Centre */
+    align-items: center;
+    /* Centre */
+    height: 100vh;
+    /* Hauteur */
+    position: fixed;
+    /* Conteneur reste en place */
+    width: 100%;
+    /* Largeur */
+}
+
+/* Loader centré */
+.loader {
+    width: 35px;
+    /* Largeur */
+    height: 80px;
+    /* Hauteur */
+    position: relative;
+    /* Position */
+}
+
+/* Animation du loader */
+.loader:after {
+    content: "";
+    /* Ajoute un élément */
+    position: absolute;
+    /* Positionne */
+    inset: 0;
+    /* S'étend dans toutes les directions */
+    padding: 3px 5px;
+    /* Espace intérieur */
+    border-top: 1px solid #bbb6aa;
+    /* Bordure en haut */
+    border-bottom: 4px solid #bbb6aa;
+    /* Bordure en bas. */
+    background: linear-gradient(#612329 0 0) bottom no-repeat content-box, #e4e0d7;
+    /* Fond dégradé */
+    mix-blend-mode: darken;
+    /* Fusionne les couleurs du dégradé avec le fond */
+    animation: l1 1.5s infinite linear;
+    /* Animation continue */
+}
+
+.loader:before {
+    content: "";
+    /* Élément vide */
+    position: absolute;
+    /* Positionne */
+    inset: -18px calc(50% - 2px) 8px;
+    /* Positionne au-dessus et au centre */
+    background: #eb6b3e;
+    /* Fond */
+    transform-origin: bottom;
+    /* Point de pivot de la transformation */
+    transform: rotate(8deg);
+    /* Incline */
+}
+
+/* Définition de l'animation */
+@keyframes l1 {
+    0% {
+        background-size: 100% 100%;
+        /* Arrière-plan visible */
+    }
+
+    100% {
+        background-size: 100% 5%;
+        /* Arrière-plan se réduit */
+    }
+}
+
+/* Masquer le contenu au départ */
+.content.hidden {
+    visibility: hidden;
+    /* Cache le contenu */
+    opacity: 0;
+    /* Rend le contenu transparent */
+    transition: opacity 0.5s ease;
+    /* Transition fluide */
+}
+
+/* Affichage du contenu après le chargement */
+.content {
+    display: block;
+    /* Contenu visible */
+    text-align: center;
+    /* Centre */
+    margin-top: 50px;
+    /* Espace au-dessus */
+}

@@ -1,0 +1,63 @@
+#formulaireContact {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    background-color: #ff8c00;
+    border-radius: 15px;
+    padding: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    resize: none;
+}
+
+#nom,
+#prenom,
+#email,
+#sujet,
+#message {
+    border-radius: 10px;
+}
+
+#envoyer {
+    display: block;
+    width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #b70c0c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#envoyer:hover {
+    background-color: #b70c0c;
+}
+
+h2{
+    color: rgb(60, 166, 60);
+}

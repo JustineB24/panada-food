@@ -1,0 +1,241 @@
+/* Principal */
+html,
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* La police d'écriture */
+    letter-spacing: 1px;
+    /* Espace entre les lettres */
+    -webkit-font-smoothing: antialiased;
+    /* Améliore l'affichage sur les navigateurs WebKit */
+    -moz-osx-font-smoothing: grayscale;
+    /* Optimise sur macOS */
+    margin: 0;
+    /* Supprime les marges */
+    padding: 0;
+    /* Supprime les espacements */
+    transition: background-color 0.3s, color 0.3s;
+    /* Durée pour passer en sombre ou clair */
+}
+
+/* Liens */
+a {
+    text-decoration: none;
+    /* Supprime le soulignement */
+}
+
+a:link,
+a:visited {
+    color: blue;
+    /* Couleur des liens */
+}
+
+/* Entête */
+div {
+    background-color: rgba(248, 176, 104);
+    /* Couleur d’arrière-plan */
+}
+
+/* Titre */
+h1 {
+    font-size: 300%;
+    /* Taille de la police */
+    padding-bottom: 20px;
+    /* Espacement en bas */
+}
+
+/* Texte */
+p {
+    font-size: 110%;
+    /* Taille de la police */
+    line-height: 2;
+    /* Espace entre les lignes */
+}
+
+/* Couleur par défaut */
+:root {
+    --background-color: white;
+    --text-color: black;
+    --button-background-color: black;
+    --button-text-color: white;
+}
+
+/* Onglet */
+ul {
+    list-style: none;
+    /* Supprime les puces des listes */
+    margin: 0;
+    /* Supprime les marges */
+    padding: 0;
+    /* Supprime les espacements */
+}
+
+li {
+    display: inline-flex;
+    /* Aligne les éléments horizontalement */
+}
+
+.navigation {
+    backdrop-filter: blur(25px);
+    background: rgba(128, 122, 122, 0.15);
+    border: 3px solid rgba(255, 214, 214, 0.3);
+    padding-bottom: 20px;
+    width: 50%;
+}
+
+.onglet {
+    position: relative;
+    /* Positionnement */
+    padding: 1rem 0 0.5rem;
+    /* Ajoute un espacement */
+    margin: 0 1.5rem;
+    /* Espacement horizontal */
+    text-transform: uppercase;
+    /* Texte en majuscule */
+}
+
+.onglet:link,
+.onglet:visited {
+    color: black;
+    /* Couleur des liens */
+}
+
+.onglet::after {
+    content: '';
+    /* Ajoute un élément */
+    position: absolute;
+    /* Positionne l'élément */
+    left: 50%;
+    /* Centre horizontalement */
+    bottom: 0;
+    /* Placé en bas */
+    transform: translateX(-50%) scaleX(0);
+    /* Initialement invisible */
+    transform-origin: 50% 50%;
+    /* Origine de transformation au centre */
+    width: 100%;
+    /* Largeur */
+    height: 3px;
+    /* Hauteur */
+    transition: transform 250ms;
+    /* Animation */
+    background-color: rgb(230, 141, 53);
+    /* Couleur */
+}
+
+.onglet:hover::after {
+    transform: translateX(-50%) scaleX(1);
+    /* Développe lors du survol */
+}
+
+/* Bouton mode sombre */
+button {
+    padding: 10px 20px;
+    /* Espacement interne */
+    margin: 20px;
+    /* Espacement externe */
+    cursor: grab;
+    /* Curseur pointeur */
+    border: none;
+    /* Supprime les bordures */
+    border-radius: 12px;
+    /* Arrondis les bords */
+    background-color: var(--button-background-color);
+    /* Couleur de fond */
+    color: var(--button-text-color);
+    /* Couleur du texte */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* Police */
+    font-size: 100%;
+    /* Taille du texte */
+    width: 15%;
+    /* Largeur */
+    height: 50px;
+    /* Hauteur */
+    transition: background-color 0.3s, color 0.3s;
+    /* Animation */
+}
+
+/* Sombre clair */
+body.dark-mode {
+    background-color: black;
+    /* Fond noir */
+    color: white;
+    /* Texte blanc */
+}
+
+body.dark-mode h1,
+body.dark-mode label,
+body.dark-mode footer {
+    color: black;
+    /* Couleur du texte */
+}
+
+body.dark-mode button {
+    background-color: var(--button-text-color);
+    /* Inverse les couleurs */
+    color: var(--button-background-color);
+}
+
+body {
+    background: #f0f0f0;
+    /* Couleur de secours si le canvas ne charge pas */
+}
+
+/* Images */
+img {
+    width: 100px;
+    /* Largeur */
+    height: 100px;
+    /* Hauteur */
+}
+
+/* Fond étoiles */
+canvas {
+    position: fixed;
+    /* Fixé au viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Largeur */
+    height: 100%;
+    /* Hauteur */
+    z-index: -1;
+    /* En arrière-plan */
+    pointer-events: none;
+    /* Ignore les interactions souris */
+}
+
+/* Bas de page */
+footer {
+    background-color: rgb(179, 171, 171);
+    /* Couleur de fond */
+    font-size: 60%;
+    /* Taille du texte */
+    text-align: center;
+    /* Centrer */
+    padding: 1rem;
+    /* Ajoute un espacement */
+    margin-top: 20px;
+    /* Ajoute un espacement avec le contenu précédent */
+}
+
+/* Flèche pour remonter en haut de la page */
+.fleche {
+    position: fixed;
+    bottom: 20px; /* Ajoutez un peu de distance depuis le bas */
+    right: 20px; /* Ajoutez un peu de distance depuis la droite */
+    z-index: 1000; /* Assurez-vous qu'elle soit visible au-dessus */
+    cursor: pointer; /* Pour indiquer que c'est cliquable */
+    transition: transform 0.3s, color 0.3s; /* Effet de transition */
+}
+
+.material-symbols-outlined {
+    color: grey; /* Couleur de base */
+    transition: color 0.3s ease; /* Transition fluide pour la couleur */
+    transform: scale(1.5);
+}
+
+.fleche:hover .material-symbols-outlined {
+    color: #f89c32; /* Couleur vive au survol */
+    transform: scale(2); /* Légèrement plus grand au survol */
+}

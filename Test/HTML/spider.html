@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiders Follow Pointer</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            /* Empêche le défilement si le canvas occupe toute la fenêtre */
+        }
+
+        canvas {
+            display: block;
+            /* Supprime les marges inutiles autour du canvas */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Canvas pour dessiner -->
+    <canvas id="canvas"></canvas>
+
+    <!-- Script JavaScript -->
+    <script>
+        // Récupérer le canvas et son contexte
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        // Variables globales pour la taille du canvas
+        let w = canvas.width = window.innerWidth;
+        let h = canvas.height = window.innerHeight;
+
+        // Fonction pour créer plusieurs spiders
+        function many(count, createFn) {
+            return Array.from({ length: count }, createFn);
+        }
+
+        // Fonction pour simuler le spawn d'un spider
+        function spawn() {
+            return {
+                x: Math.random() * w,
+                y: Math.random() * h,
+                speed: 0.05,
+                follow(targetX, targetY) {
+                    // Déplace progressivement vers la cible
+                    this.x += (targetX - this.x) * this.speed;
+                    this.y += (targetY - this.y) * this.speed;
+                },
+                tick() {
+                    // Dessiner le spider (par exemple un cercle)
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, 5, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            };
+        }
+
+        // Créer deux spiders
+        const spiders = many(2, spawn);
+
+        // Suivre le pointeur de la souris
+        addEventListener("pointermove", (e) => {
+            spiders.forEach(spider => {
+                spider.follow(e.clientX, e.clientY);
+            });
+        });
+
+        // Boucle d'animation
+        requestAnimationFrame(function anim(t) {
+            if (w !== innerWidth) w = canvas.width = innerWidth;
+            if (h !== innerHeight) h = canvas.height = innerHeight;
+            ctx.fillStyle = "#000";
+            ctx.fillRect(0, 0, w, h); // Remplir le fond en noir
+            ctx.fillStyle = "#fff";
+            spiders.forEach(spider => spider.tick(t));
+            requestAnimationFrame(anim);
+        });
+    </script>
+</body>
+
+</html>

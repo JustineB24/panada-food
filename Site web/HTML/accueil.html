@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Accueil">
+    <title>Panada Food</title>
+    <link rel="shortcut icon" type="image/x-icon" alt="Logo restaurant rapide Panada Food"
+        href="../Images/Logo panada food.ico" />
+    <link href="../CSS/accueil_style.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="../CSS/index.css" media="all" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_circle_up" />
+</head>
+
+<body>
+    <center>
+        <div>
+            <!-- Menu de navigation -->
+            <nav class="navigation">
+                <ul>
+                    <li>
+                        <a class="onglet" href="accueil.html">Accueil</a>
+                    </li>
+                    <li>
+                        <a class="onglet" href="menu.html">Menu</a>
+                    </li>
+                    <li>
+                        <a class="onglet" href="contact.html">Contact</a>
+                    </li>
+                    <li>
+                        <a class="onglet" href="mentions_legales.html">Mentions l&eacute;gales</a>
+                    </li>
+                </ul>
+            </nav>
+            <br>
+
+            <!-- Bouton pour changer de thème -->
+            <button id="theme-toggle">Mode Sombre</button>
+            <!-- Etoiles en fond -->
+            <canvas id="canvas"></canvas>
+            <script src="../JS/etoile.js"></script>
+
+            <h1>Accueil</h1>
+            <img id="logo" alt="Logo du restaurant rapide Panada Food" src="../Images/Logo panada food.png">
+        </div>
+
+        <main>
+            <br>
+            <p>Retrouvez-nous au 59 boulevard de Saint-Quentin &agrave; Amiens (80 000)</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d624.4573331363393!2d2.29543970892342!3d49.87962855008615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e7845c42378e25%3A0x5db5230b2c681a70!2s59%20Bd%20de%20Saint-Quentin%2C%2080000%20Amiens!5e0!3m2!1sfr!2sfr!4v1731514220893!5m2!1sfr!2sfr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                alt="Carte google map de l'adresse Panada Food Amiens"></iframe>
+            <br>
+            <hr>
+            <section id="horaires">
+                <h2><u>Horaires :</u></h2>
+                <p>
+                    <strong>Hors vacances :</strong><br>
+                    Lundi au Vendredi : 10h30 &agrave; 22h30<br>
+                    Samedi : 11h &agrave; 14h / 18h &agrave; 22h30<br>
+                    <strong>Vacances :</strong><br>
+                    Lundi au Samedi : 11h &agrave; 14h / 18h &agrave; 22h30
+                </p>
+            </section>
+            <hr>
+            <section id="modesPaiement">
+                <h2><u>Modes de paiement :</u></h2>
+                <br>
+                <table>
+                    <tr>
+                        <th>Esp&egrave;ce</th>
+                        <th>Carte bancaire <br> (Avec ou sans contact)</th>
+                        <th>Ticket restaurant</th>
+                        <th>Swile</th>
+                    </tr>
+                    <tr>
+                        <th><img class="image" alt="Icône monnaies et billets" src="../Images/Argent.png"></th>
+                        <th><img class="image" alt="Icône carte bancaire" src="../Images/Carte de credit.png"></th>
+                        <th><img class="image" alt="Icône ticket restaurant" src="../Images/Billet.png"></th>
+                        <th><img class="image" alt="Icône Swile" src="../Images/Swile.png"></th>
+                    </tr>
+                </table>
+            </section>
+            <br>
+            <hr>
+            <section id="services">
+                <h2><u>Informations pratique :</u></h2>
+                <table>
+                    <tr>
+                        <th><img class="image" alt="Icône Wi-fi" src="../Images/Wi Fi.png"></th>
+                        <th><img class="image" alt="Icône Halal" src="../Images/Halal.png"></th>
+                        <th><img class="image" alt="Icône interdit de fumer" src="../Images/Non fumeur.png"></th>
+                    </tr>
+                    <tr>
+                        <th>Wi-Fi gratuit</th>
+                        <th>Halal</th>
+                        <th>Non-fumeur</th>
+                    </tr>
+                </table>
+            </section>
+            <a class="fleche" href="#"><span
+                    class="material-symbols-outlined">arrow_circle_up</span></a>
+        </main>
+        <br>
+        <script src="../JS/theme.js"></script>
+</body>
+<!-- Bas de page copyright -->
+<footer>
+    <section id="reseaux">
+        <p class="reseau"><strong><u>Nos r&eacute;seaux sociaux :</u></strong></p><br>
+        <a class="reseau" alt="Logo TikTok" href="https://www.tiktok.com/@panada.food?lang=fr"><img class="imgres"
+                src="../Images/TikTok logo.png"></a>
+        <a class="reseau" alt="Logo Instagram" href="https://www.instagram.com/panada__food/"><img class="imgres"
+                src="../Images/Instagram logo.png"></a>
+    </section>
+    <br>
+    <p class="basDePage">&copy; 2024 Panada Food. Tous droits r&eacute;serv&eacute;s.</p>
+</footer>
+</center>
+
+</html>

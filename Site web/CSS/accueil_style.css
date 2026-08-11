@@ -1,0 +1,43 @@
+/* Logo du restaurant */
+#logo {
+    width: 15%;
+    /* Largeur */
+    height: 15%;
+    /* Hauteur */
+    padding-bottom: 20px;
+    /* Espacement du bas */
+}
+
+/* Ligne séparatrice */
+hr {
+    width: 30%;
+    /* Largeur */
+    background-color: rgb(255, 39, 0);
+    /* Couleur */
+    height: 3px;
+    /* Hauteur */
+    border: none;
+    /* Retirer la bordure */
+}
+
+/* Tableau */
+th {
+    padding: 20px;
+    /* Espacement */
+}
+
+/* Réseaux sociaux */
+.reseau {
+    padding: 20px;
+    /* Espacement */
+    font-size: 17px;
+    /* Taille de la police */
+}
+
+/* Icône réseaux sociaux */
+.imgres {
+    width: 4%;
+    /* Largeur */
+    height: 4%;
+    /* Hauteur */
+}

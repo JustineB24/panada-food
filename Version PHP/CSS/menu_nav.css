@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+/* Conteneur global de l'entête */
+.entete {
+    display: flex;
+    /* Active Flexbox */
+    align-items: center;
+    /* Aligne les éléments verticalement */
+    justify-content: space-between;
+    /* Espace entre le titre et les onglets */
+    background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(255, 85, 0, 1) 25%, rgba(255, 111, 0, 1) 50%, rgba(255, 145, 0, 1) 75%, rgba(255, 188, 0, 1) 100%);
+    /* Couleur de fond */
+    padding: 10px 20px;
+    /* Ajoute des marges internes */
+    width: 100%;
+    /* Occupe toute la largeur */
+}
+
+/* Titre en haut à gauche */
+#titreResto {
+    font-family: "Permanent Marker", cursive;
+    font-size: 150%;
+    text-transform: uppercase;
+    color: black;
+    /* Couleur du texte */
+    margin: 0;
+    /* Supprime les marges du paragraphe */
+    margin-left: 10%;
+    background: rgba(255, 255, 255, 0.5);
+    /* Couleur de fond */
+    border-radius: 1rem;
+    border: 3px solid black;
+}
+
+/* Onglet */
+ul {
+    list-style: none;
+    /* Supprime les puces des listes */
+    margin: 0;
+    /* Supprime les marges */
+    padding: 0;
+    /* Supprime les espacements */
+}
+
+li {
+    display: inline-flex;
+    /* Aligne les éléments horizontalement */
+}
+
+.navigation {
+    padding-bottom: 20px;
+    /* Espacement en bas */
+    width: 50%;
+    /* Largeur */
+    height: 100%;
+    /* Hauteur */
+    margin: 0 auto;
+    /* Centre horizontalement */
+    display: flex;
+    justify-content: center;
+    /* Centre les onglets */
+    align-items: center;
+    /* Centre verticalement */
+}
+
+.onglet {
+    position: relative;
+    /* Positionnement */
+    padding: 1rem 0 0.5rem;
+    /* Ajoute un espacement */
+    margin: 0 1.5rem;
+    /* Espacement horizontal */
+    text-transform: uppercase;
+    /* Texte en majuscule */
+}
+
+.onglet:link,
+.onglet:visited {
+    color: black;
+    /* Couleur des liens */
+}
+
+.onglet::after {
+    content: "";
+    /* Ajoute un élément */
+    position: absolute;
+    /* Positionne l'élément */
+    left: 50%;
+    /* Centre horizontalement */
+    bottom: 0;
+    /* Placé en bas */
+    transform: translateX(-50%) scaleX(0);
+    /* Initialement invisible */
+    transform-origin: 50% 50%;
+    /* Origine de transformation au centre */
+    width: 100%;
+    /* Largeur */
+    height: 3px;
+    /* Hauteur */
+    transition: transform 250ms;
+    /* Animation */
+    background-color: black;
+    /* Couleur */
+}
+
+.onglet:hover::after {
+    transform: translateX(-50%) scaleX(1);
+    /* Développe lors du survol */
+}
+
+/* Supprimer la barre orange sur les appareils mobiles et tablettes */
+@media (max-width: 1024px) {
+
+    /* Tablettes et smartphones */
+    .onglet::after {
+        content: none;
+        /* Supprime le pseudo-élément */
+    }
+}
+
+.commander {
+    position: fixed;
+    /* Fixé par rapport à la fenêtre */
+    top: 20px;
+    right: 0px;
+    width: 150px;
+    height: 40px;
+    background: linear-gradient(45deg, rgba(255, 0, 0, 1) 20%, rgba(255, 75, 0, 1) 45%, rgba(255, 135, 0, 1) 70%);
+    border: none;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    color: #2d2a2a;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);
+    /* Douce ombre portée */
+    transition: all 0.3s ease;
+    /* Transition fluide pour tous les effets */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    z-index: 999;
+    /* Toujours visible par-dessus les autres éléments */
+}
+
+.cartIcon {
+    width: 16px;
+    /* Taille légèrement augmentée */
+    height: fit-content;
+    transition: transform 0.3s ease;
+    /* Ajout d'une animation au hover */
+}
+
+.cartIcon path {
+    fill: #2d2a2a;
+    /* Couleur initiale */
+    transition: fill 0.3s ease;
+    /* Animation de la couleur */
+}
+
+/* Effet survol */
+.commander:hover {
+    background: linear-gradient(45deg, rgba(255, 50, 0, 1) 20%, rgba(255, 125, 0, 1) 45%, rgba(255, 200, 0, 1) 70%);
+    color: white;
+    /* Change la couleur du texte */
+    box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.3);
+    /* Accentue l'ombre */
+    transform: translateX(-5px);
+    /* Légère translation vers la gauche */
+}
+
+.commander:hover .cartIcon path {
+    fill: white;
+    /* Change la couleur de l'icône au survol */
+}
+
+.commander:active {
+    transform: translateY(2px);
+    /* Simule un effet de clic en abaissant légèrement le bouton */
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+    /* Réduit l'ombre */
+    padding-bottom: 1px;
+}
+
+.commander:active .cartIcon {
+    transform: scale(0.9);
+    /* Réduit légèrement la taille de l'icône au clic */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .button {
+        width: 120px;
+        /* Réduction pour petits écrans */
+        height: 35px;
+        font-size: 0.9rem;
+        /* Taille de texte ajustée */
+    }
+
+    .cartIcon {
+        width: 12px;
+        /* Taille de l'icône ajustée */
+    }
+}

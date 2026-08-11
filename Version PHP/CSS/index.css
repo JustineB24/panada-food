@@ -1,0 +1,304 @@
+html,
+body {
+    display: flex;
+    /* Organise les éléments */
+    flex-direction: column;
+    /* Aligne les éléments */
+    justify-content: center;
+    /* Centre les éléments */
+    align-items: center;
+    /* Centre les éléments */
+    margin: 0;
+    /* Supprime les marges */
+    padding: 0;
+    /* Supprime les espacements internes */
+    width: 100%;
+    /* Largeur */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* Police d'écriture */
+    letter-spacing: 1px;
+    /* Espacement */
+    transition: background-color 0.3s, color 0.3s;
+    /* Transition des couleurs */
+    text-align: center;
+    /* Centre */
+    background: var(--background-color);
+    color: var(--text-color);
+    box-sizing: border-box;
+    /* Inclus padding et bordures */
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Liens */
+a {
+    text-decoration: none;
+    /* Supprime le soulignement */
+}
+
+a:link,
+a:visited {
+    color: blue;
+    /* Couleur des liens */
+}
+
+/* Titres */
+h1 {
+    font-size: 4rem;
+    /* Taille de la police */
+    padding-bottom: 20px;
+    /* Espacement en bas */
+}
+
+h2 {
+    font-size: 2rem;
+    /* Taille de la police */
+    padding-bottom: 20px;
+    /* Espacement en bas */
+}
+
+/* Texte */
+p {
+    font-size: 1.2rem;
+    /* Taille de la police */
+    line-height: 1.6;
+    /* Espace entre les lignes */
+    max-width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    margin: 10px auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Couleurs par défaut */
+:root {
+    --background-color: white;
+    --text-color: black;
+    --button-background-color: black;
+    --button-text-color: white;
+}
+
+/* Bouton mode sombre/clair */
+.switch {
+    font-size: 1rem;
+    /* Taille de la police */
+    position: absolute;
+    /* Fixe le bouton en haut à droite */
+    top: 10px;
+    /* Décalage par rapport au haut */
+    right: 180px;
+    /* Décalage par rapport au côté droit */
+    z-index: 1000;
+    /* S'assure que le bouton reste au-dessus du contenu */
+    display: inline-block;
+    width: 64px;
+    /* Largeur */
+    height: 34px;
+    /* Hauteur */
+    margin-top: 1rem;
+}
+
+.switch input {
+    opacity: 0;
+    /* Opacité */
+    width: 0;
+    /* Largeur */
+    height: 0;
+    /* Hauteur */
+}
+
+.slider {
+    position: absolute;
+    /* Positionnement */
+    cursor: pointer;
+    /* Pour indiquer que c'est cliquable */
+    top: 0;
+    /* Positionne le bord supérieur */
+    left: 0;
+    /* Positionne le bord gauche */
+    right: 0;
+    /* Positionne le bord droit */
+    bottom: 0;
+    /* Positionne le bord inférieur */
+    background-color: #73C0FC;
+    /* Couleur de fond */
+    transition: 0.4s;
+    /* Transition fluide */
+    border-radius: 30px;
+    /* Coins arrondis */
+}
+
+.slider:before {
+    position: absolute;
+    /* Positionnement */
+    content: "";
+    /* Pseudo-élément vide */
+    height: 30px;
+    /* Hauteur */
+    width: 30px;
+    /* Largeur */
+    /* border-radius: 50%; */
+    border-radius: 20px;
+    /* Bord arrondi */
+    left: 2px;
+    /* Positionne à gauche */
+    bottom: 2px;
+    /* Positionne au bord inférieur */
+    z-index: 2;
+    background-color: #e8e8e8;
+    /* Couleur de fond */
+    transition: 0.4s;
+    /* Transition */
+}
+
+.sun svg {
+    position: absolute;
+    /* Position absolue */
+    top: 6px;
+    /* Décale du haut */
+    left: 36px;
+    /* Décale de la gauche */
+    z-index: 1;
+    /* Place l'élément au-dessus d'autres */
+    width: 24px;
+    /* Largeur */
+    height: 24px;
+    /* Hauteur */
+}
+
+.moon svg {
+    fill: #73C0FC;
+    /* Couleur intérieur */
+    position: absolute;
+    /* Position absolue */
+    top: 5px;
+    /* Décale du haut */
+    left: 5px;
+    /* Décale de la gauche */
+    z-index: 1;
+    /* Place l'élément au-dessus d'autres */
+    width: 24px;
+    /* Largeur */
+    height: 24px;
+    /* Hauteur */
+}
+
+/* Animation Soleil et Lune */
+.sun svg {
+    animation: rotate 15s linear infinite;
+    /* Animation */
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        /* Animation début */
+    }
+
+    100% {
+        transform: rotate(360deg);
+        /* Animation fin */
+    }
+}
+
+.moon svg {
+    animation: tilt 5s linear infinite;
+    /* Animation */
+}
+
+@keyframes tilt {
+
+    0% {
+        transform: rotate(0deg);
+        /* Animation début */
+    }
+
+    25% {
+        transform: rotate(-10deg);
+        /* 25% de l'animation */
+    }
+
+    75% {
+        transform: rotate(10deg);
+        /* 75% de l'animation */
+    }
+
+    100% {
+        transform: rotate(0deg);
+        /* Animation fin */
+    }
+}
+
+.input:checked+.slider {
+    background-color: #183153;
+    /* Couleur du fond */
+}
+
+.input:focus+.slider {
+    box-shadow: 0 0 1px #183153;
+    /* Contour */
+}
+
+.input:checked+.slider:before {
+    transform: translateX(30px);
+    /* Déplace l'élément */
+}
+
+/* Mode sombre */
+body.dark-mode {
+    --background-color: black;
+    --text-color: white;
+    --button-background-color: white;
+    --button-text-color: black;
+}
+
+body.dark-mode label,
+body.dark-mode footer {
+    color: black;
+    /* Couleur du texte */
+}
+
+/* Responsive avec Media Queries */
+/* Tablettes */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .switch {
+        top: 15px;
+        right: 15px;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+        margin: 5px 10px;
+        padding: 5px;
+    }
+
+    .switch {
+        top: 8px;
+        right: 8px;
+    }
+}

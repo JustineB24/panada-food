@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mentions_Légales">
+    <title>Panada Food</title>
+    <link rel="shortcut icon" type="image/x-icon" alt="Logo restaurant rapide Panada Food"
+        href="../Images/Logo_panada_food.ico">
+    <link href="../CSS/mentions_legales_style.css" media="all" rel="stylesheet" type="text/css">
+    <link href="../CSS/index.css" media="all" rel="stylesheet" type="text/css">
+    <link href="../CSS/menu_nav.css" media="all" rel="stylesheet" type="text/css">
+    <link href="../CSS/footer.css" media="all" rel="stylesheet" type="text/css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_circle_up">
+</head>
+
+<body>
+    <div class="entete">
+        <!-- Titre en haut à gauche -->
+        <p id="titreResto">Mentions l&eacute;gales</p>
+        <?php include "menu_nav.php"; ?>
+    </div>
+
+
+    <p id="texteLoi">Conform&eacute;ment aux dispositions de la loi <a href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000801164"> n&deg; 2004-575 du 21 juin 2004</a>
+        pour la confiance en l'&eacute;conomie num&eacute;rique,<br>
+        il est pr&eacute;cis&eacute; aux utilisateurs du site Amine Panada Food l'identit&eacute; des diff&eacute;rents intervenants dans le
+        cadre de sa r&eacute;alisation et de son suivi.
+    </p>
+
+    <section id="ide">
+        <h2>Identit&eacute; de l'entreprise</h2>
+        <p>Amine Panada Food <br>
+            Soci&eacute;t&eacute; par Action Simplifi&eacute;e au capital de 2 000 &euro;. <br>
+            59 Boulevard de Saint-Quentin, 80000 Amiens <br>
+            T&eacute;l : <a href="tel:0322465339">03 22 46 53 39</a><br>
+            Mail : <a href="mailto:panada.food80@gmail.com">panada.food80@gmail.com</a><br>
+            N&deg;TVA : FR79983000415 <br>
+            RCS Amiens : 983 000 415 <br>
+            Pr&eacute;sident : EL HAIMER Jalal <br>
+            Directeur g&eacute;n&eacute;ral : ABDELOUHABI Ilyas <br>
+            Droits moraux du site : <a
+                href="https://www.linkedin.com/in/aur%C3%A9lie-boulet-le-huu-hoa-a80600292/">BOULET - - LE HUU HOA
+                Aur&eacute;lie</a> et <a href="https://www.linkedin.com/in/justine-blin-a88600292">BLIN Justine</a>
+        </p>
+    </section>
+    <section id="hebergement">
+        <h2>H&eacute;bergement</h2>
+        <p>Nom ou d&eacute;nomination sociale : <br>
+            Statut juridique : <br>
+            Adresse : <br>
+            Num&eacute;ro de t&eacute;l&eacute;phone : <br>
+            Mail : <br>
+            RCS (ville) :
+        </p>
+    </section>
+    <section id="contact">
+        <h2>Nous contacter</h2>
+        <p>Par t&eacute;l&eacute;phone : <a href="tel:0322465339">03 22 46 53 39</a><br>
+            Par email : <a href="mailto:panada.food80@gmail.com">panada.food80@gmail.com</a><br>
+            Par courrier : 59 Boulevard Saint-Quentin, 80000 AMIENS
+        </p>
+    </section>
+    <section id="photos">
+        <h2>Cr&eacute;dits photographiques</h2>
+        <p>Ic&ocirc;nes des modes de paiement :</p>
+        <a href="https://www.flaticon.com/fr/icones-gratuites/argent" title="argent icônes">Argent ic&ocirc;nes
+            cr&eacute;&eacute;es par LAFS - Flaticon</a><br>
+
+        <a href="https://www.flaticon.com/fr/icones-gratuites/sans-contact" title="sans contact icônes">Sans contact
+            ic&ocirc;nes cr&eacute;&eacute;es par Freepik - Flaticon</a><br>
+
+        <a href="https://www.flaticon.com/fr/icones-gratuites/coupon" title="coupon icônes">Coupon ic&ocirc;nes
+            cr&eacute;&eacute;es par
+            xnimrodx - Flaticon</a><br>
+
+        <a href="https://www.swile.co/fr-fr" title="swile icônes">Swile ic&ocirc;nes cr&eacute;&eacute;es par
+            Swile</a><br>
+
+        <p>Ic&ocirc;nes des services :</p>
+        <a href="https://www.flaticon.com/fr/icones-gratuites/wifi-gratuit" title="wifi gratuit icônes">Wifi gratuit
+            ic&ocirc;nes cr&eacute;&eacute;es par Triangle Squad - Flaticon</a><br>
+
+        <a href="https://www.flaticon.com/fr/icones-gratuites/halal" title="halal icônes">Halal ic&ocirc;nes
+            cr&eacute;&eacute;es par
+            Freepik - Flaticon</a><br>
+
+        <a href="https://www.flaticon.com/fr/icones-gratuites/zone-non-fumeurs" title="zone non-fumeurs icônes">Zone
+            non-fumeurs ic&ocirc;nes cr&eacute;&eacute;es par Icon.verse - Flaticon</a>
+        <br>
+    </section>
+    <div id="reseaux-sociaux">
+        <p>R&eacute;seaux sociaux :</p>
+        <a href="https://cdn.brandfetch.io/id-0D6OFrq/w/800/h/800/theme/dark/ids2Tdief8.png?c=1dxbfHSJFAPEGdCLU4o5B"
+            title="Logo TikTok">TikTok ic&ocirc;nes cr&eacute;&eacute;es par TikTok</a><br>
+        <a href="https://cdn.brandfetch.io/ido5G85nya/w/800/h/800/theme/light/id8qc6z_TX.png?c=1dxbfHSJFAPEGdCLU4o5B"
+            title="Logo Instagram">Instagram ic&ocirc;nes cr&eacute;&eacute;es par Instagram</a>
+    </div>
+    <script src="../JS/theme.js"></script>
+</body>
+<!-- Bas de page copyright -->
+<footer>
+    <?php include "footer.php"; ?>
+</footer>
+
+</html>
