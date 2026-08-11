@@ -1,0 +1,123 @@
+body {
+    background-color: #ffeabb;
+    /* Couleur de fond */
+}
+
+/* Conteneur */
+.container {
+    display: flex;
+    /* Organise les éléments */
+    justify-content: center;
+    /* Centre les éléments */
+    align-items: center;
+    /* Centre les éléments */
+    height: 100vh;
+    /* Hauteur */
+    position: fixed;
+    /* Conteneur reste en place */
+    width: 100%;
+    /* Largeur */
+    font-size: 10rem;
+    /* Taille de la police */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* Police du texte */
+}
+
+/* Loader centré */
+.loader {
+    width: 2.5rem;
+    /* Largeur */
+    height: 6rem;
+    /* Hauteur */
+    position: relative;
+    /* Position */
+}
+
+/* Animation du loader */
+.loader:after {
+    content: "";
+    /* Ajoute un élément */
+    position: absolute;
+    /* Positionne */
+    inset: 0;
+    /* S'étend dans toutes les directions */
+    padding: 3px 5px;
+    /* Espace intérieur */
+    border-top: 1px solid #bbb6aa;
+    /* Bordure en haut */
+    border-bottom: 4px solid #bbb6aa;
+    /* Bordure en bas. */
+    background: linear-gradient(#612329 0 0) bottom no-repeat content-box, #e4e0d7;
+    /* Fond dégradé */
+    mix-blend-mode: darken;
+    /* Fusionne les couleurs du dégradé avec le fond */
+    animation: l1 1.5s infinite linear;
+    /* Animation continue */
+}
+
+.loader:before {
+    content: "";
+    /* Élément vide */
+    position: absolute;
+    /* Positionne */
+    inset: -18px calc(50% - 2px) 8px;
+    /* Positionne au-dessus et au centre */
+    background: #eb6b3e;
+    /* Fond */
+    transform-origin: bottom;
+    /* Point de pivot de la transformation */
+    transform: rotate(8deg);
+    /* Incline */
+}
+
+/* Définition de l'animation */
+@keyframes l1 {
+    0% {
+        background-size: 100% 100%;
+        /* Arrière-plan visible */
+    }
+
+    100% {
+        background-size: 100% 5%;
+        /* Arrière-plan se réduit */
+    }
+}
+
+/* Masquer le contenu au départ */
+.content.hidden {
+    visibility: hidden;
+    /* Cache le contenu */
+    opacity: 0;
+    /* Rend le contenu transparent */
+    transition: opacity 0.5s ease;
+    /* Transition fluide */
+}
+
+/* Affichage du contenu après le chargement */
+.content {
+    display: block;
+    /* Contenu visible */
+    text-align: center;
+    /* Centre */
+    margin-top: 50px;
+    /* Espace au-dessus */
+}
+
+.loader-container {
+    display: flex;
+    /* Organise les éléments */
+    flex-direction: column;
+    /* Aligne les éléments */
+    align-items: center;
+    /* Aligne les éléments */
+}
+
+/* 'Chargement' loader */
+#charge {
+    margin-top: 15px;
+    /* Espace supérieur */
+    text-align: center;
+    /* Centre*/
+    font-size: 2rem;
+    /* Taille de la police */
+}

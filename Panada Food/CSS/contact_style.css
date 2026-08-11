@@ -1,0 +1,17 @@
+/* Slogan */
+h3 {
+    margin: 3%;
+    /* Marge en haut */
+}
+
+/* Media Queries pour responsivité */
+
+/* Pour les écrans de taille moyenne */
+@media (max-width: 1024px) {
+
+    /* Slogan */
+    h3 {
+        margin: 10%;
+        /* Marge en haut */
+    }
+}

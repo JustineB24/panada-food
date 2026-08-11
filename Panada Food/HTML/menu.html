@@ -1,0 +1,189 @@
+<!-- Menu du restaurant -->
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Amiens, Restaurant rapide, Plats savoureux, À emporter, Livraison à domicile, Commander en ligne, Halal, Menus variés">
+    <title>Panada Food</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../Images/Logo_panada_food.ico">
+    <link href="../CSS/menu_style.css" media="all" rel="stylesheet" type="text/css">
+    <link href="../CSS/index.css" media="all" rel="stylesheet" type="text/css">
+    <link href="../CSS/menu_nav.css" media="all" rel="stylesheet" type="text/css">
+    <link href="../CSS/footer.css" media="all" rel="stylesheet" type="text/css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_circle_up">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navigation et autres éléments -->
+        <header class="entete">
+            <!-- Titre de la page -->
+            <p id="titrePage">Menu</p>
+            <!-- Menu de navigation -->
+            <nav class="navigation" aria-label="Menu principal">
+                <ul>
+                    <li><a class="onglet" href="accueil.html">Accueil</a></li>
+                    <li><a class="onglet" href="menu.html">Menu</a></li>
+                    <li><a class="onglet" href="contact.html">Contact</a></li>
+                    <li><a class="onglet" href="mentions_legales.html">Mentions l&eacute;gales</a></li>
+                </ul>
+            </nav>
+            <!-- Menu burger -->
+            <input hidden class="check-icon" id="check-icon" name="check-icon" type="checkbox">
+            <label class="icon-menu" for="check-icon" aria-label="Menu burger">
+                <div class="bar bar--1"></div>
+                <div class="bar bar--2"></div>
+                <div class="bar bar--3"></div>
+            </label>
+            <div class="ticket">
+                <div class="ticket-header">
+                    <h1>Panada Food</h1>
+                    <p>Appelez, commandez, kiffez !</p>
+                </div>
+                <div class="side-menu">
+                    <ul>
+                        <li>
+                            <a class="ongletBurger" href="accueil.html">
+                                <img class="iconBurger" src="../Images/house-solid.svg" alt="Icône accueil">
+                                <span class="texteBurger">Accueil</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="ongletBurger" href="menu.html">
+                                <img class="iconBurger" src="../Images/utensils-solid.svg" alt="Icône menu">
+                                <span class="texteBurger">Menu</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="ongletBurger" href="contact.html">
+                                <img class="iconBurger" src="../Images/phone-solid.svg" alt="Icône contact">
+                                <span class="texteBurger">Contact</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="ongletBurger" href="mentions_legales.html">
+                                <img class="iconBurger" src="../Images/scale-balanced-solid.svg"
+                                    alt="Icône mentions légales">
+                                <span class="texteBurger">Mentions légales</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ticket-footer">
+                    <p>À bientôt !</p>
+                </div>
+            </div>
+
+            <script src="../JS/burger.js"></script>
+            <!-- Bouton commander -->
+            <a href="https://www.ubereats.com/fr/store/panada-food/05m04etrRRKId9TOD1FaqQ" class="commander"
+                aria-label="Commander sur Uber Eats" target="_blank" rel="noopener noreferrer">
+                Commander
+                <svg class="cartIcon" viewBox="0 0 576 512">
+                    <path
+                        d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z">
+                    </path>
+                </svg>
+            </a>
+            <!-- Bouton pour changer de thème -->
+            <label class="switch" aria-label="Changer le mode clair/sombre">
+                <span class="sun" aria-label="Soleil">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <g fill="#ffd43b">
+                            <circle r="5" cy="12" cx="12"></circle>
+                            <path
+                                d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z">
+                            </path>
+                        </g>
+                    </svg>
+                </span>
+                <span class="moon" aria-label="Lune">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                        <path
+                            d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+                        </path>
+                    </svg>
+                </span>
+                <input type="checkbox" class="input">
+                <span class="slider"></span>
+            </label>
+        </header>
+
+        <!-- Contenu principal -->
+        <main>
+            <!-- Menu contenu -->
+            <div id="CarteMenu" aria-label="Menu du Panada Food">
+                <img class="carte" alt="Carte des burgers giant" src="../Images/Big_Giant.png" loading="lazy">
+                <img class="carte" alt="Carte des burgers" src="../Images/Burgers.png" loading="lazy">
+                <img class="carte" alt="Carte des sandwichs" src="../Images/Sandwichs.png" loading="lazy">
+                <img class="carte" alt="Carte des pizzas" src="../Images/Pizzas.png" loading="lazy">
+                <img class="carte" alt="Carte des tacos" src="../Images/Tacos.png" loading="lazy">
+                <img class="carte" alt="Carte diverses" src="../Images/Divers.png" loading="lazy">
+
+                <!-- Bouton menu -->
+                <a id="download" aria-label="Bouton pour télécharger le menu" href="../Images/Menu.pdf"
+                    download="Menu_Panada_Food.pdf" target="_blank">Télécharger le menu</a>
+            </div>
+        </main>
+
+        <script src="../JS/theme.js"></script>
+
+        <!-- Bas de page -->
+        <footer>
+            <!-- Flèche pour aller en haut de la page -->
+            <a class="fleche" href="#" aria-label="Flèche pour retourner en haut de la page">
+                <span class="material-symbols-outlined">arrow_circle_up</span></a>
+            <!-- Réseau sociaux -->
+            <div id="reseaux">
+                <ul class="example-1">
+                    <li class="icon-content">
+                        <a href="https://www.instagram.com/panada__food/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram" data-social="instagram" class="link">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                                    fill="currentColor" />
+                                <path
+                                    d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+                                    fill="currentColor" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
+                                    fill="currentColor" />
+                            </svg>
+                        </a>
+                        <div class="tooltip">Instagram</div>
+                    </li>
+                    <li class="icon-content">
+                        <a href="https://www.tiktok.com/@panada.food?lang=fr" target="_blank" rel="noopener noreferrer"
+                            aria-label="TikTok" data-social="tiktok" class="link">
+                            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M412.19,118.66a109.27,109.27,0,0,1-9.45-5.5,132.87,132.87,0,0,1-24.27-20.62c-18.1-20.71-24.86-41.72-27.35-56.43h.1C349.14,23.9,350,16,350.13,16H267.69V334.78c0,4.28,0,8.51-.18,12.69,0,.52-.05,1-.08,1.56,0,.23,0,.47-.05.71,0,.06,0,.12,0,.18a70,70,0,0,1-35.22,55.56,68.8,68.8,0,0,1-34.11,9c-38.41,0-69.54-31.32-69.54-70s31.13-70,69.54-70a68.9,68.9,0,0,1,21.41,3.39l.1-83.94a153.14,153.14,0,0,0-118,34.52,161.79,161.79,0,0,0-35.3,43.53c-3.48,6-16.61,30.11-18.2,69.24-1,22.21,5.67,45.22,8.85,54.73v.2c2,5.6,9.75,24.71,22.38,40.82A167.53,167.53,0,0,0,115,470.66v-.2l.2.2C155.11,497.78,199.36,496,199.36,496c7.66-.31,33.32,0,62.46-13.81,32.32-15.31,50.72-38.12,50.72-38.12a158.46,158.46,0,0,0,27.64-45.93c7.46-19.61,9.95-43.13,9.95-52.53V176.49c1,.6,14.32,9.41,14.32,9.41s19.19,12.3,49.13,20.31c21.48,5.7,50.42,6.9,50.42,6.9V131.27C453.86,132.37,433.27,129.17,412.19,118.66Z"
+                                    fill="currentColor" />
+                            </svg>
+                        </a>
+                        <div class="tooltip">TikTok</div>
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <!-- Onglets -->
+            <div id="bas_nav">
+                <a class="onglet_bas" href="accueil.html">Accueil</a> |
+                <a class="onglet_bas" href="menu.html">Menu</a> |
+                <a class="onglet_bas" href="contact.html">Contact</a> |
+                <a class="onglet_bas" href="mentions_legales.html">Mentions l&eacute;gales</a>
+            </div>
+            <br>
+            <!-- Copyright -->
+            <p class="basDePage">&copy; 2024 Panada Food. Tous droits r&eacute;serv&eacute;s.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

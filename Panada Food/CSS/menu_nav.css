@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+/* Police importé */
+
+/* Conteneur global de l'entête */
+.entete {
+    display: flex;
+    /* Active Flexbox */
+    align-items: center;
+    /* Aligne les éléments verticalement */
+    justify-content: center;
+    /* Espace entre le titre et les onglets */
+    background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(255, 60, 0, 1) 25%, rgba(255, 106, 0, 1) 50%, rgba(255, 124, 0, 1) 75%, rgba(255, 188, 0, 1) 100%);
+    /* Couleur de fond */
+    width: 100%;
+    /* Occupe toute la largeur */
+    z-index: 200;
+    /* Superposition */
+}
+
+/* Titre en haut à gauche */
+#titrePage {
+    font-family: "Permanent Marker", cursive;
+    /*  STyle de la police */
+    font-size: 150%;
+    /* Taille de la police */
+    text-transform: uppercase;
+    /* Forme du texte */
+    color: black;
+    /* Couleur du texte */
+    margin: 0;
+    /* Supprime les marges du paragraphe */
+    margin-left: 5%;
+    background: rgba(255, 255, 255, 0.5);
+    /* Couleur de fond */
+    border-radius: 1rem;
+    /* Coins arrondis */
+    border: 3px solid black;
+    /* Bordure */
+}
+
+/* Onglet */
+.navigation {
+    padding-bottom: 20px;
+    /* Espacement en bas */
+    width: 50%;
+    /* Largeur */
+    height: 100%;
+    /* Hauteur */
+    margin: 0 auto;
+    /* Centre horizontalement */
+    margin-left: 0;
+    /* Marge */
+    display: flex;
+    /* Organise les éléments */
+    align-items: center;
+    /* Centre verticalement */
+    font-weight: bold;
+    /* Police en gras */
+}
+
+li {
+    display: inline-flex;
+    /* Aligne les éléments horizontalement */
+}
+
+/* Onglets */
+.onglet,
+.ongletBurger {
+    position: relative;
+    /* Positionnement */
+    padding: 1rem 0 0.5rem;
+    /* Ajoute un espacement */
+    margin: 0 1.5rem;
+    /* Espacement horizontal */
+    text-transform: uppercase;
+    /* Texte en majuscule */
+}
+
+.onglet:link,
+.onglet:visited {
+    color: black;
+    /* Couleur des liens */
+}
+
+.onglet::after {
+    content: "";
+    /* Ajoute un élément */
+    position: absolute;
+    /* Positionne l'élément */
+    left: 50%;
+    /* Centre horizontalement */
+    bottom: 0;
+    /* Placé en bas */
+    transform: translateX(-50%) scaleX(0);
+    /* Initialement invisible */
+    transform-origin: 50% 50%;
+    /* Origine de transformation au centre */
+    width: 100%;
+    /* Largeur */
+    height: 3px;
+    /* Hauteur */
+    transition: transform 250ms;
+    /* Animation */
+    background-color: black;
+    /* Couleur */
+}
+
+.onglet:hover::after {
+    transform: translateX(-50%) scaleX(1);
+    /* Développe lors du survol */
+}
+
+/* Bouton commander */
+.commander {
+    position: fixed;
+    /* Fixé par rapport à la fenêtre */
+    top: 20px;
+    /* Haut */
+    right: 0px;
+    /* Droite */
+    width: 150px;
+    /* Largeur */
+    height: 40px;
+    /* Hauteur */
+    background: linear-gradient(45deg, rgba(255, 0, 0, 1) 20%, rgba(255, 75, 0, 1) 45%, rgba(255, 135, 0, 1) 70%);
+    /* Fond */
+    border: none;
+    /* Bordure */
+    border-top-left-radius: 50px;
+    /* Bordure en haut à gauche arrondis */
+    border-bottom-left-radius: 50px;
+    /* Bordure en bas à gauche arrondis */
+    color: #2d2a2a;
+    /* Couleur */
+    font-weight: bold;
+    /* Police en gras */
+    font-size: 0.8rem;
+    /* Taille de la police */
+    display: flex;
+    /* Organise les éléments */
+    align-items: center;
+    /* Centre les éléments */
+    justify-content: center;
+    /* Centre les éléments */
+    gap: 5px;
+    /* Espace */
+    cursor: pointer;
+    /* Curseur */
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);
+    /* Douce ombre portée */
+    transition: all 0.3s ease;
+    /* Transition fluide pour tous les effets */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* Style de la police */
+    z-index: 50;
+    /* Toujours visible par-dessus les autres éléments */
+}
+
+.commander:link,
+.commander:visited {
+    color: black;
+    /* Couleur */
+}
+
+.cartIcon {
+    width: 16px;
+    /* Taille légèrement augmentée */
+    height: fit-content;
+    /* Hauteur */
+    transition: transform 0.3s ease;
+    /* Ajout d'une animation au hover */
+}
+
+.cartIcon path {
+    fill: #2d2a2a;
+    /* Couleur initiale */
+    transition: fill 0.3s ease;
+    /* Animation de la couleur */
+}
+
+/* Effet survol */
+.commander:hover {
+    background: linear-gradient(45deg, rgba(255, 50, 0, 1) 20%, rgba(255, 125, 0, 1) 45%, rgba(255, 200, 0, 1) 70%);
+    /* Fond */
+    color: white;
+    /* Change la couleur du texte */
+    box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.3);
+    /* Accentue l'ombre */
+    transform: translateX(-5px);
+    /* Légère translation vers la gauche */
+}
+
+.commander:hover .cartIcon path {
+    fill: white;
+    /* Change la couleur de l'icône au survol */
+}
+
+.commander:active {
+    transform: translateY(2px);
+    /* Simule un effet de clic en abaissant légèrement le bouton */
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+    /* Réduit l'ombre */
+    padding-bottom: 1px;
+    /* Espacement bas */
+}
+
+.commander:active .cartIcon {
+    transform: scale(0.9);
+    /* Réduit légèrement la taille de l'icône au clic */
+}
+
+/* Menu burger */
+.icon-menu {
+    --gap: 5px;
+    /* Espacement entre les barres */
+    --height-bar: 3px;
+    /* Hauteur des barres */
+    --pos-y-bar-one: 0;
+    /* Position verticale */
+    --pos-y-bar-three: 0;
+    /* Position verticale */
+    --scale-bar: 1;
+    /* Echelle initial */
+    --rotate-bar-one: 0;
+    /* Angle de rotation du premier */
+    --rotate-bar-three: 0;
+    /* Angle de rotation de dernier */
+    width: 30px;
+    /* Largeur */
+    display: flex;
+    /* Organise les éléments */
+    flex-direction: column;
+    /* Aligne les éléments */
+    gap: var(--gap);
+    /* Espacement entre les barres */
+    cursor: pointer;
+    /* Curseur */
+    position: absolute;
+    /* Position */
+    top: 2rem;
+    /* Positionner en haut */
+    left: 2rem;
+    /* Positionner à gauche */
+    z-index: 200;
+    /* Augmentez encore pour garantir que c'est au-dessus */
+}
+
+.bar {
+    position: relative;
+    /* Position */
+    height: var(--height-bar);
+    /* Hauteur */
+    width: 100%;
+    /* Largeur */
+    border-radius: .5rem;
+    /* Coins arrondis */
+    background-color: black;
+    /* Couleur de fond */
+}
+
+.bar--1 {
+    top: var(--pos-y-bar-one);
+    /* Position verticale */
+    transform: rotate(var(--rotate-bar-one));
+    /* Rotation */
+    transition: top 200ms 100ms, transform 100ms;
+    /* Transition des propriétés */
+}
+
+.bar--2 {
+    transform: scaleX(var(--scale-bar));
+    /* Mise à l'échelle horizontale */
+    transition: transform 150ms 100ms;
+    /* Transition de la transformation */
+}
+
+.bar--3 {
+
+    bottom: var(--pos-y-bar-three);
+    /* Position verticale */
+    transform: rotate(var(--rotate-bar-three));
+    /* Rotation */
+    transition: bottom 200ms 100ms, transform 100ms;
+    /* Transition des propriétés */
+}
+
+.check-icon:checked+.icon-menu>.bar--1 {
+    transition: top 200ms, transform 200ms 100ms;
+    /* Transition plus fluide */
+}
+
+.check-icon:checked+.icon-menu>.bar--3 {
+    transition: bottom 200ms, transform 200ms 100ms;
+    /* Transition plus fluide */
+}
+
+.check-icon:checked+.icon-menu {
+    --pos-y-bar-one: calc(var(--gap) + var(--height-bar));
+    --pos-y-bar-three: calc(var(--gap) + var(--height-bar));
+    /* Ajuste la position verticale */
+    --scale-bar: 0;
+    /* Réduit la largeur */
+    --rotate-bar-one: 45deg;
+    --rotate-bar-three: -45deg;
+    /* Définit les rotations */
+}
+
+/* Style général du ticket */
+.ticket {
+    position: fixed;
+    /* Position */
+    top: -1000%;
+    /* Cache initialement le menu au-dessus de l'écran */
+    left: 0;
+    /* Gauche */
+    right: 0;
+    /* Droite */
+    background-color: #cecece;
+    /* Fond blanc comme un ticket */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    /* Ombre */
+    z-index: 100;
+    /* Superposition */
+    transition: top 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    /* Animation */
+    padding: 20px;
+    /* Espacement */
+    border: 2px dashed #333;
+    /* Bordure en pointillés */
+    font-family: 'Courier New', Courier, monospace;
+    /* Police type ticket */
+    font-size: 1.2rem;
+    /* Taille de la police */
+}
+
+/* En-tête du ticket */
+.ticket-header {
+    text-align: center;
+    /* Texte */
+    margin-bottom: 20px;
+    /* Marge inférieur */
+    border-bottom: 2px dashed #333;
+    /* Ligne pointillée */
+    padding-bottom: 10px;
+    /* Espacement inférieur */
+}
+
+.ticket-header h1 {
+    font-size: 1.5rem;
+    /* Taille de la police */
+    margin-top: 10%;
+    /* Marge supérieur */
+}
+
+.ticket-header p {
+    font-size: 0.9rem;
+    /* Taille de la police */
+    margin: 5px 0 0;
+    /* Marge */
+}
+
+/* Menu stylisé */
+.side-menu ul {
+    list-style: none;
+    /* Retire les puces */
+    padding: 0;
+    /* Espacement */
+    margin: 0;
+    /* Marge */
+}
+
+/* Éléments de la liste */
+.side-menu li {
+    display: flex;
+    /* Aligne les éléments */
+    align-items: center;
+    /* Centre les enfants verticalement */
+    margin: 30px 0;
+    /* Supprime justify-content: space-between si inutile */
+}
+
+.ongletBurger {
+    display: flex;
+    /* Aligne les éléments */
+    align-items: center;
+    /* Centre verticalement les enfants */
+    text-decoration: none;
+    /* Style du texte */
+    font-weight: bold;
+    /* Police en gras */
+    transition: color 0.3s ease;
+    /* Transition */
+    width: 100%;
+    /* S'assurer qu'il prend toute la largeur */
+    margin-left: 10%;
+    /* Marge gauche */
+}
+
+.ongletBurger:link,
+.ongletBurger:visited {
+    color: #333;
+    /* Couleur */
+}
+
+.iconBurger {
+    width: 30px;
+    /* Ajuste la taille de l'icône */
+    height: 30px;
+    /* Ajuste la hauteur de l'icône */
+    margin-right: 10px;
+    /* Espace entre l'icône et le texte */
+    flex-shrink: 0;
+    /* Empêche les icônes de se redimensionner */
+}
+
+.texteBurger {
+    flex: 1;
+    /* Fait en sorte que l'élément texte occupe l'espace disponible */
+    margin-left: 0;
+    /* Supprime la marge inutile */
+}
+
+/* Pied de page du ticket */
+.ticket-footer {
+    text-align: center;
+    /* Aligne le texte */
+    margin-top: 20px;
+    /* Marge supérieur */
+    border-top: 2px dashed #333;
+    /* Ligne pointillée */
+    padding-top: 10px;
+    /* Espacement supérieur */
+    font-size: 0.9rem;
+    /* Taille de la police */
+}
+
+/* Affichage du menu lorsque la case est cochée */
+.check-icon:checked~.ticket {
+    top: 0;
+    /* Fait apparaître le menu */
+}
+
+/* Media Queries pour responsivité */
+
+/* Pour les ordinateurs */
+@media (min-width: 1025px) {
+
+    /* Enlève le menu burger */
+    .icon-menu {
+        display: none;
+        /* Retire */
+    }
+}
+
+/* Pour les écrans de taille moyenne */
+@media (max-width: 1024px) {
+
+    /* Conteneur global de l'entête */
+    .entete {
+        padding: 2.5rem;
+        /* Espacement */
+    }
+
+    /* Centrer le titre */
+    #titrePage {
+        display: none;
+        /* Retire */
+    }
+
+    /* Onglet */
+    .navigation {
+        display: none;
+        /* Retire */
+    }
+
+    /* Supprimer la barre noir sur les appareils mobiles et tablettes */
+    .onglet::after {
+        content: none;
+        /* Supprime le pseudo-élément */
+    }
+}
+
+/* Pour les écrans de petite taille */
+@media (max-width: 768px) {
+    .side-menu {
+        left: -500px;
+        /* Initialement hors de l'écran */
+        width: 90%;
+        /* Largeur */
+    }
+}

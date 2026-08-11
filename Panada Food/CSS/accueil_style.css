@@ -1,0 +1,554 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik+Mono+One&display=swap');
+/* Police importé */
+
+/* Conteneur principal pour le titre et le logo */
+.header-container {
+    display: grid;
+    /* Organise les éléments */
+    grid-template-columns: 1fr 1fr;
+    /* Crée deux colonnes de même largeur */
+    gap: 10px;
+    /* Espacement entre les éléments */
+    justify-content: flex-start;
+    /* Aligne horizontalement */
+    align-items: center;
+    /* Aligne verticalement */
+    box-sizing: border-box;
+    /* Inclus padding et bordures */
+    margin-top: 5%;
+    /* Marge supérieur */
+    text-align: center;
+    /* Aligne le texte */
+    margin-left: 5%;
+    /* Marge à gauche */
+}
+
+/* Ajustement du titre */
+.header-container h1 {
+    font-size: 7rem;
+    /* Taille de la police */
+    text-transform: uppercase;
+    /* Forme du texte */
+}
+
+/* Ajustement du logo */
+.header-container #logo {
+    width: 30rem;
+    /* Largeur */
+    height: auto;
+    /* Hauteur */
+}
+
+h1 {
+    font-family: "Rubik Mono One";
+    /* Police d'écriture */
+}
+
+/* Classe food avec des barres autour */
+.food {
+    display: inline-block;
+    /* Aligne les éléments */
+    font-size: 4rem;
+    /* Taille de la police */
+    position: relative;
+    /* Position */
+    padding: 0 20px;
+    /* Espacement autour de "Food" */
+}
+
+.food::before,
+.food::after {
+    content: "";
+    /* Pseudo-élément vide */
+    position: absolute;
+    /* Position */
+    top: 40%;
+    /* Haut */
+    width: 50%;
+    /* Largeur */
+    height: 2px;
+    /* Épaisseur des barres */
+    background-color: rgb(87, 87, 87);
+    /* Couleur des barres */
+}
+
+/* Barre gauche */
+.food::before {
+    padding: 5px;
+    /* Espacement */
+    left: 0;
+    /* Gauche */
+    transform: translateX(-100%);
+    /* Décale vers la gauche */
+}
+
+/* Barre droite */
+.food::after {
+    padding: 5px;
+    /* Espacement */
+    right: 0;
+    /* Droite */
+    transform: translateX(100%);
+    /* Décale vers la droite */
+}
+
+/* Carte Google Maps */
+iframe {
+    display: block;
+    /* Elément de type bloc. */
+    margin: 20px auto;
+    /* Centre l'iframe */
+    width: 600px;
+    /* Largeur */
+    height: 450px;
+    /* Hauteur */
+    border: none;
+    /* Bordure */
+}
+
+/* Ligne séparatrice */
+hr {
+    width: 30%;
+    /* Largeur */
+    background-color: red;
+    /* Couleur */
+    height: 3px;
+    /* Hauteur */
+    border: none;
+    /* Retirer la bordure */
+    margin-top: 5%;
+    /* Marge haut */
+    margin-bottom: 5%;
+    /* Marge bas */
+}
+
+#separe {
+    background-color: rgb(87, 87, 87);
+    /* Couleur */
+    width: 90%;
+    /* Largeur */
+    height: 5px;
+    /* Hauteur */
+    border: none;
+    /* Bordure */
+    margin-top: 5%;
+    /* Marge haut */
+    margin-bottom: 2%;
+    /* Marge bas */
+}
+
+/* Modes de paiement et infos pratiques */
+.flex-container {
+    display: flex;
+    /* Organise les éléments */
+    flex-direction: column;
+    /* Disposition verticale */
+    gap: 10px;
+    /* Espacement entre les lignes */
+    text-align: center;
+    /* Aligne le texte */
+}
+
+.flex-row {
+    display: flex;
+    /* Organise les éléments */
+    justify-content: space-around;
+    /* Répartir uniformément les éléments */
+    gap: 10px;
+    /* Espacement entre les colonnes */
+    margin-top: 5%;
+    /* Marge supérieur */
+}
+
+.flex-item {
+    flex: 1;
+    /* Les items prennent la même largeur */
+    font-weight: bold;
+    /* Police en gras */
+    font-size: 150%;
+    /* Taille de la police */
+}
+
+/* Images */
+.image {
+    width: 30%;
+    /* Hauteur */
+}
+
+/* Conteneur principal de la galerie */
+.gallery {
+    display: grid;
+    /* Organise les éléments */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Disposition des colonnes */
+    gap: 20px;
+    /* Espacement entre les colonnes */
+    padding: 20px;
+    /* Espacement */
+    background-color: #FF6A00;
+    /* Couleur fond */
+    border-radius: 10px;
+    /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Ombre */
+}
+
+/* Style des images */
+.gallery .resto {
+    width: 100%;
+    /* Largeur */
+    height: auto;
+    /* Hauteur */
+    border-radius: 8px;
+    /* Coins arrondis */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    /* Ombre */
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    /* Transition */
+}
+
+/* Effet au survol des images */
+.gallery .resto:hover {
+    transform: scale(var(--hover-scale)) translateY(-5px);
+    /* Transforme */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    /* Ombre */
+}
+
+/* Images zoomables */
+.zoomable {
+    cursor: zoom-in;
+    /* Curseur */
+    transition: transform 0.3s ease-in-out;
+    /* Animation */
+}
+
+.zoomable:hover {
+    transform: scale(1.2);
+    /* Zoom sur l'image au survol */
+}
+
+/* Modale d'image */
+#image-modal {
+    position: fixed;
+    /* Position */
+    top: 0;
+    /* Haut */
+    left: 0;
+    /* Gauche */
+    width: 100%;
+    /* Largeur */
+    height: 100%;
+    /* Hauteur */
+    background-color: black;
+    /* Couleur de fond */
+    display: flex;
+    /* Organise les éléments */
+    justify-content: center;
+    /* Aligne les éléments */
+    align-items: center;
+    /* Aligne les éléments */
+    z-index: 1000;
+    /* Superposition */
+    visibility: hidden;
+    /* Visibilité */
+    opacity: 0;
+    /* Opacité */
+    transition: opacity 0.3s, visibility 0.3s;
+    /* Transition */
+}
+
+/* Image agrandie */
+#image-modal img {
+    width: 100%;
+    /* Prend toute la largeur de l'écran */
+    height: 100vh;
+    /* Prend toute la hauteur de l'écran */
+    object-fit: contain;
+    /* Assure que l'image conserve ses proportions */
+}
+
+/* Bouton de fermeture */
+#image-modal .close-btn {
+    /* position: absolute; */
+    position: fixed;
+    /* Position */
+    top: 1rem;
+    /* Haut */
+    left: 1rem;
+    /* Gauche */
+    font-size: 3rem;
+    /* Taille de la flèche */
+    color: white;
+    /* Couleur */
+    background: transparent;
+    /* Fond transparent */
+    border: none;
+    /* Bordure */
+    padding: 10px;
+    /* Espacement */
+    border-radius: 10px;
+    /* Bord arrondi */
+    cursor: pointer;
+    /* Cursor */
+    z-index: 10;
+    /* Superposition */
+}
+
+/* Flèches de navigation */
+#image-modal .nav-btn {
+    position: absolute;
+    /* Position */
+    top: 50%;
+    /* Haut */
+    font-size: 3rem;
+    /* Taille de la police */
+    color: white;
+    /* Couleur */
+    background: rgb(255, 77, 0);
+    /* Couleur de fond */
+    border: none;
+    /* Bordure */
+    padding: 10px 20px;
+    /* Espacement */
+    border-radius: 10%;
+    /* Coins arrondis */
+    cursor: pointer;
+    /* Curseur */
+    z-index: 20;
+    /* Superposition */
+    transform: translateY(-50%);
+    /* Transforme */
+}
+
+/* Flèche droite */
+#image-modal .right-btn {
+    right: 1rem;
+    /* Fixe la flèche à droite */
+}
+
+/* Flèche gauche */
+#image-modal .left-btn {
+    left: 1rem;
+    /* Fixe la flèche à gauche */
+}
+
+/* Effet au survol des flèches */
+#image-modal .nav-btn:hover {
+    background: rgb(255, 132, 0);
+    /* Couleur de fond */
+}
+
+/* Affiche la modale */
+#image-modal.visible {
+    visibility: visible;
+    /* Visibilité */
+    opacity: 1;
+    /* Opacité */
+}
+
+/* Cache la modale par défaut */
+#image-modal.hidden {
+    visibility: hidden;
+    /* Visibilité */
+    opacity: 0;
+    /* Opacité */
+}
+
+.avis {
+    font-weight: bold;
+    /* Police en gras */
+}
+
+/* Media Queries pour responsivité */
+
+/* Pour certains appareils */
+@media (max-width: 1280px) {
+    /* Titre de la page */
+    .header-container h1 {
+        font-size: 4rem;
+        /* Taille de la police */
+        margin-left: 10%;
+        /* Marge gauche */
+    }
+
+    /* Classe food avec des barres autour */
+    .food {
+        font-size: 3rem;
+        /* Taille de la police */
+    }
+
+    /* Barre gauche */
+    .food::before {
+        padding: 2px;
+        /* Espacement */
+        width: 25%;
+        /* Largeur */
+    }
+
+    /* Barre droite */
+    .food::after {
+        padding: 2px;
+        /* Espacement */
+        width: 25%;
+        /* Largeur */
+    }
+
+    /* Logo du restaurant */
+    .header-container #logo {
+        width: 50%;
+        /* Largeur */
+        padding-bottom: 20px;
+        /* Espacement du haut */
+        margin-right: 10%;
+        /* Marge droite */
+    }
+}
+
+/* Pour les écrans de taille moyenne */
+@media (max-width: 1024px) {
+
+    /* Conteneur principal pour le titre et le logo */
+    .header-container {
+        margin-left: 0;
+        /* Enleve la marge gauche */
+    }
+
+    /* Titre de la page */
+    .header-container h1 {
+        font-size: 3rem;
+        /* Taille de la police */
+        margin-left: 10%;
+        /* Marge gauche */
+    }
+
+    /* Classe food avec des barres autour */
+    .food {
+        font-size: 2rem;
+        /* Taille de la police */
+    }
+
+    /* Barre gauche */
+    .food::before {
+        padding: 2px;
+        /* Espacement */
+        width: 30%;
+        /* Largeur */
+    }
+
+    /* Barre droite */
+    .food::after {
+        padding: 2px;
+        /* Espacement */
+        width: 30%;
+        /* Largeur */
+    }
+
+    /* Logo du restaurant */
+    .header-container #logo {
+        width: 30%;
+        /* Largeur */
+        max-width: 300px;
+        /* Garde une limite supérieure */
+        height: auto;
+        /* Conserve les proportions */
+        padding-bottom: 20px;
+        /* Espacement du haut */
+        margin-right: 10%;
+        /* Marge droite */
+    }
+
+    .flex-container {
+        margin: 1rem;
+        /* Marge */
+    }
+
+    .flex-item {
+        font-size: 100%;
+        /* Taille de la police */
+    }
+
+    /* Images */
+    .image {
+        width: 50%;
+        /* Hauteur */
+    }
+
+    /* Image agrandie */
+    #image-modal img {
+        max-width: 90%;
+        /* Largeur maximum */
+        max-height: 90%;
+        /* Hauteur maximum */
+    }
+
+    /* Flèches de navigation */
+    #image-modal .nav-btn {
+        font-size: 2rem;
+        /* Taille de la police */
+    }
+}
+
+/* Pour les écrans de petite taille */
+@media (max-width: 768px) {
+
+    /* Conteneur principal pour le titre et le logo */
+    .header-container {
+        display: flex;
+        /* Organise les éléments */
+        flex-direction: column;
+        /* Empile les éléments */
+        align-items: center;
+        /* Centre horizontalement */
+        text-align: center;
+        /* Centre le texte */
+    }
+
+    /* Titre de la page */
+    .header-container h1 {
+        font-size: 2.5rem;
+        /* Taille de la police */
+        margin-left: 0;
+        /* Supprime les marges inutiles */
+        margin-bottom: 1rem;
+        /* Ajoute un espacement sous le titre */
+    }
+
+    /* Classe food avec des barres autour */
+    .food {
+        font-size: 1.5rem;
+        /* Taille de la police */
+    }
+
+    /* Logo du restaurant */
+    .header-container #logo {
+        width: 50%;
+        /* Largeur */
+        margin-right: 0%;
+        /* Marge droite */
+    }
+
+    /* Carte Google Maps */
+    iframe {
+        width: 350px;
+        /* Largeur */
+        height: 250px;
+        /* Hauteur */
+    }
+
+    /* Image agrandie */
+    #image-modal img {
+        max-width: 90%;
+        /* Largeur maximum */
+        max-height: 90%;
+        /* Hauteur maximum */
+    }
+
+    /* Flèches de navigation */
+    #image-modal .nav-btn {
+        font-size: 1rem;
+        /* Taille de la police */
+        padding: 5px 10px;
+        /* Espacement */
+    }
+}

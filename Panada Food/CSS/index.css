@@ -1,0 +1,422 @@
+html,
+body {
+    margin: 0;
+    /* Supprime les marges */
+    padding: 0;
+    /* Supprime les espacements internes */
+    width: 100%;
+    /* Largeur */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* Police d'écriture */
+    letter-spacing: 1px;
+    /* Espacement entre les lettres*/
+    transition: background-color 0.3s, color 0.3s;
+    /* Transition des couleurs */
+    text-align: center;
+    /* Centre */
+    background: var(--background-color);
+    /* Couleur fond */
+    color: var(--text-color);
+    /* Couleur */
+    box-sizing: border-box;
+    /* Inclus padding et bordures */
+    max-width: 100%;
+    /* Largeur maximum */
+    overflow-x: hidden;
+    /* Défilement horizontal annulé */
+    position: relative;
+    /* Position */
+}
+
+/* Le conteneur principal */
+.container {
+    display: flex;
+    /* Organise les éléments */
+    flex-direction: column;
+    /* Aligne les éléments */
+    min-height: 100vh;
+    /* La hauteur doit couvrir toute la fenêtre */
+}
+
+/* Le contenu principal */
+main {
+    flex: 1;
+    /* Occupe tout l'espace disponible au-dessus du footer */
+}
+
+/* Liens */
+a {
+    text-decoration: none;
+    /* Supprime le soulignement */
+}
+
+a:link,
+a:visited {
+    color: blue;
+    /* Couleur des liens */
+}
+
+/* Titres */
+h1 {
+    font-size: 4rem;
+    /* Taille de la police */
+    padding-bottom: 20px;
+    /* Espacement en bas */
+}
+
+h2 {
+    font-size: 3rem;
+    /* Taille de la police */
+    padding-bottom: 20px;
+    /* Espacement en bas */
+    text-decoration: underline;
+    /* Souligne */
+}
+
+h3 {
+    font-size: 2rem;
+    /* Taille de la police */
+}
+
+/* Texte */
+p {
+    font-size: 1.5rem;
+    /* Taille de la police */
+    line-height: 1.6;
+    /* Espace entre les lignes */
+    max-width: 100%;
+    /* Largeur maximum */
+    word-break: break-word;
+    /* Couper les mots */
+    overflow-wrap: break-word;
+    /* Limite au conteneur */
+    margin: 10px auto;
+    /* Marge */
+    padding: 10px;
+    /* Espacement */
+    box-sizing: border-box;
+    /* Ajuste la taile */
+}
+
+/* Couleurs par défaut */
+:root {
+    --background-color: white;
+    --text-color: black;
+    --button-background-color: black;
+    --button-text-color: white;
+}
+
+/* Bouton mode sombre/clair */
+.switch {
+    font-size: 1rem;
+    /* Taille de la police */
+    position: absolute;
+    /* Fixe le bouton en haut à droite */
+    top: 0.5rem;
+    /* Décalage par rapport au haut */
+    right: 10.5rem;
+    /* Décalage par rapport au côté droit */
+    z-index: 50;
+    /* S'assure que le bouton reste au-dessus du contenu */
+    display: inline-block;
+    /* Aligne les éléments */
+    width: 64px;
+    /* Largeur */
+    height: 34px;
+    /* Hauteur */
+    margin-top: 1rem;
+    /* Marge supérieur */
+}
+
+.switch input {
+    opacity: 0;
+    /* Opacité */
+    width: 0;
+    /* Largeur */
+    height: 0;
+    /* Hauteur */
+}
+
+.slider {
+    position: absolute;
+    /* Positionnement */
+    cursor: pointer;
+    /* Pour indiquer que c'est cliquable */
+    top: 0;
+    /* Positionne le bord supérieur */
+    left: 0;
+    /* Positionne le bord gauche */
+    right: 0;
+    /* Positionne le bord droit */
+    bottom: 0;
+    /* Positionne le bord inférieur */
+    background-color: #73C0FC;
+    /* Couleur de fond */
+    transition: 0.4s;
+    /* Transition fluide */
+    border-radius: 30px;
+    /* Coins arrondis */
+}
+
+.slider:before {
+    position: absolute;
+    /* Positionnement */
+    content: "";
+    /* Pseudo-élément vide */
+    height: 30px;
+    /* Hauteur */
+    width: 30px;
+    /* Largeur */
+    border-radius: 20px;
+    /* Coins arrondis */
+    left: 2px;
+    /* Positionne à gauche */
+    bottom: 2px;
+    /* Positionne au bord inférieur */
+    z-index: 2;
+    /* Ordre de superposition */
+    background-color: #e8e8e8;
+    /* Couleur de fond */
+    transition: 0.4s;
+    /* Transition */
+}
+
+.sun svg {
+    position: absolute;
+    /* Position absolue */
+    top: 6px;
+    /* Décale du haut */
+    left: 36px;
+    /* Décale de la gauche */
+    z-index: 1;
+    /* Place l'élément au-dessus d'autres */
+    width: 24px;
+    /* Largeur */
+    height: 24px;
+    /* Hauteur */
+}
+
+.moon svg {
+    fill: #73C0FC;
+    /* Couleur intérieur */
+    position: absolute;
+    /* Position absolue */
+    top: 5px;
+    /* Décale du haut */
+    left: 5px;
+    /* Décale de la gauche */
+    z-index: 1;
+    /* Place l'élément au-dessus d'autres */
+    width: 24px;
+    /* Largeur */
+    height: 24px;
+    /* Hauteur */
+}
+
+/* Animation Soleil et Lune */
+.sun svg {
+    animation: rotate 15s linear infinite;
+    /* Animation */
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        /* Animation début */
+    }
+
+    100% {
+        transform: rotate(360deg);
+        /* Animation fin */
+    }
+}
+
+.moon svg {
+    animation: tilt 5s linear infinite;
+    /* Animation */
+}
+
+@keyframes tilt {
+
+    0% {
+        transform: rotate(0deg);
+        /* Animation début */
+    }
+
+    25% {
+        transform: rotate(-10deg);
+        /* 25% de l'animation */
+    }
+
+    75% {
+        transform: rotate(10deg);
+        /* 75% de l'animation */
+    }
+
+    100% {
+        transform: rotate(0deg);
+        /* Animation fin */
+    }
+}
+
+.input:checked+.slider {
+    background-color: #183153;
+    /* Couleur du fond */
+}
+
+.input:focus+.slider {
+    box-shadow: 0 0 1px #183153;
+    /* Contour */
+}
+
+.input:checked+.slider:before {
+    transform: translateX(30px);
+    /* Déplace l'élément */
+}
+
+/* Mode sombre */
+body.dark-mode {
+    --background-color: black;
+    --text-color: white;
+    --button-background-color: white;
+    --button-text-color: black;
+}
+
+body.dark-mode label,
+body.dark-mode footer {
+    color: black;
+    /* Couleur du texte */
+}
+
+/* Règle CSS globale pour garantir que tous les éléments utilisent le modèle de boîte correct */
+* {
+    box-sizing: border-box;
+    /* Taille de la box */
+}
+
+/* Style général pour le pop-up */
+.popup {
+    position: fixed;
+    /* Position */
+    bottom: 0;
+    /* Bas */
+    left: 0;
+    /* Gauche */
+    width: 100%;
+    /* Largeur */
+    background-color: #007BFF;
+    /* Couleur de fond */
+    color: #fff;
+    /* Couleur */
+    text-align: center;
+    /* Texte position */
+    padding: 15px;
+    /* Espacement */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    /* Ombre */
+    display: flex;
+    /* Organise les éléments */
+    flex-direction: column;
+    /* Organise le contenu en colonne */
+    justify-content: center;
+    /* Centre verticalement */
+    align-items: center;
+    /* Centre horizontalement */
+    z-index: 1000;
+    /* Superposition */
+    transition: transform 0.3s ease-in-out;
+    /* Transition */
+    transform: translateY(100%);
+    /* Transformation */
+    margin: 0;
+    /* Évite tout débordement lié aux marges */
+}
+
+/* Contenu du pop-up */
+.popup-content {
+    font-size: 16px;
+    /* Taille de la police */
+    margin-bottom: 10px;
+    /* Ajoute un espacement avec le bouton */
+    text-align: center;
+    /* Centre le texte */
+}
+
+/* Bouton de fermeture */
+.popup button {
+    background-color: #fff;
+    /* Couleur de fond */
+    color: #007BFF;
+    /* Couleur */
+    border: none;
+    /* Bordure */
+    padding: 10px 20px;
+    /* Espacement */
+    border-radius: 5px;
+    /* Coins arrondis */
+    cursor: pointer;
+    /* Curseur */
+}
+
+.popup button:hover {
+    background-color: #f0f0f0;
+    /* Couleur de fond */
+}
+
+/* Affichage du pop-up */
+.popup.show {
+    transform: translateY(0);
+    /* Transformation */
+}
+
+/* Media Queries pour responsivité */
+
+/* Pour les écrans de taille moyenne */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+        /* Taille de la police */
+    }
+
+    h2 {
+        font-size: 2rem;
+        /* Taille de la police */
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        /* Taille de la police */
+    }
+
+    p {
+        font-size: 1.2rem;
+        /* Taille de la police */
+    }
+}
+
+/* Pour les écrans de petite taille */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+        /* Taille de la police */
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        /* Taille de la police */
+    }
+
+    h3 {
+        font-size: 1rem;
+        /* Taille de la police */
+    }
+
+    p {
+        font-size: 1rem;
+        /* Taille de la police */
+        margin: 5px 10px;
+        /* Marge */
+        padding: 5px;
+        /* Espacement */
+    }
+}

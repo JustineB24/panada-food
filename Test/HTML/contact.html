@@ -5,40 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/contact_style.css">
     <title>TEST</title>
 </head>
 
 <body>
-    <section class="contact-form">
-        <h2>Contactez-nous</h2>
-        <form action="traitement.php" method="POST">
-            <!-- Nom -->
-            <div class="form-group">
-                <label for="name">Nom :</label>
-                <input type="text" id="name" name="name" placeholder="Votre nom" required>
-            </div>
+    <button id="theme-toggle">Mode Sombre</button>
 
-            <!-- Email -->
-            <div class="form-group">
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" placeholder="Votre email" required>
-            </div>
+    <div class="form-card1">
+        <div class="form-card2">
+            <form class="form">
+                <p class="form-heading">Get In Touch</p>
 
-            <!-- Sujet -->
-            <div class="form-group">
-                <label for="subject">Sujet :</label>
-                <input type="text" id="subject" name="subject" placeholder="Sujet de votre message" required>
-            </div>
+                <div class="form-field">
+                    <input required="" placeholder="Name" class="input-field" type="text" />
+                </div>
 
-            <!-- Message -->
-            <div class="form-group">
-                <label for="message">Message :</label>
-                <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
-            </div>
+                <div class="form-field">
+                    <input required="" placeholder="Email" class="input-field" type="email" />
+                </div>
 
-            <!-- Bouton d'envoi -->
-            <button type="submit">Envoyer</button>
-        </form>
+                <div class="form-field">
+                    <input required="" placeholder="Subject" class="input-field" type="text" />
+                </div>
+
+                <div class="form-field">
+                    <textarea required="" placeholder="Message" cols="30" rows="3" class="input-field"></textarea>
+                </div>
+
+                <button class="sendMessage-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <script src="../JS/script.js"></script>
     </section>
 </body>
 
