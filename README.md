@@ -66,12 +66,3 @@ n'est pas fini. `Test` est du HTML statique.
 
 Les `config.php` de `Site web` et `Version PHP` attendent `localhost`, l'utilisateur `root` et un
 mot de passe vide, soit les valeurs par défaut de XAMPP. Aucun identifiant réel n'est dans ce dépôt.
-
-## Points connus
-
-- **Espaces dans les noms de dossiers** (`Panada Food`, `Site web`, `Version PHP`). Sans conséquence
-  tant que le projet reste une archive, mais à savoir s'il devait un jour être servi ou scripté.
-- **Noms de fichiers accentués**, sur quelques images (`Entrée.JPG`, `Façade_2.JPG`…). Git les gère,
-  mais ce sont les seuls chemins qu'il doit échapper.
-- **Les captures du portfolio ne sont pas dans ce dépôt.** Elles vivent dans
-  `Portfolio/assets/projets/panada_food/`, en cinq vues au format WebP avec repli JPEG.
