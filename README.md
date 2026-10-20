@@ -7,10 +7,9 @@ n'avait aucune présence en ligne.
 Le site a été mis en ligne sur un hébergement OVH, à l'adresse `panadafood.ovh`, sur un domaine que
 le restaurant n'a pas renouvelé depuis.
 
-> **Dépôt privé, et il doit le rester par défaut.** Le code a été produit dans le cadre d'un stage
-> en entreprise : la question de savoir à qui il appartient n'est pas réglée par le fait de l'avoir
-> écrit. Les photos de plats, du comptoir et de la salle ne sont pas non plus forcément à moi. Ne
-> pas publier sans l'accord du restaurant.
+> **Droits.** Les photos (plats, comptoir, salle), la carte, le logo et l'identité visuelle
+> appartiennent au restaurant Panada Food. Ils figurent ici uniquement pour montrer le site tel qu'il
+> a été livré et ne sont pas réutilisables.
 
 ## Les quatre dossiers
 
@@ -24,14 +23,6 @@ un historique.
 | `Site web`    | État antérieur du même site vitrine, sans écran de chargement ni bascule de thème. Quatre pages, et un formulaire de contact qui passait par PHP et MySQL.                                               |
 | `Version PHP` | **Essai jamais terminé, jamais mis en place.** Une reprise des pages en PHP pour ajouter la commande en ligne (`panier.php`, `ajout_panier.php`). Abandonné, le site livré est resté statique.            |
 | `Test`        | Bac à sable, en marge. Contient `spider.html`, un essai d'animation d'araignées qui suivent le pointeur.                                                                                                 |
-
-> **Comment le site livré a été identifié**, parce que ce n'était pas évident et que je m'y suis
-> trompé une première fois : la fiche du portfolio porte une capture `Ecran_chargement`, et l'écran
-> de chargement n'existe que dans `Panada Food` et dans l'essai PHP, pas dans `Site web`. Les cinq
-> captures de la fiche correspondent exactement aux cinq pages de `Panada Food/HTML/`.
->
-> Ne pas se fier au nombre de fichiers : `Version PHP` en a 56 contre 54, ce qui ne dit rien de ce
-> qui a été rendu.
 
 ## Le site livré
 
