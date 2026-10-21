@@ -17,12 +17,12 @@ le restaurant n'a pas renouvelé depuis.
 abandonné. Il n'y avait pas de git à l'époque, donc tout a été conservé côte à côte plutôt que dans
 un historique.
 
-| Dossier       | Ce que c'est                                                                                                                                                                                            |
-|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `Panada Food` | **Le site livré**, celui qui a tourné en ligne. Cinq pages, statique. Voir le détail plus bas.                                                                                                           |
-| `Site web`    | État antérieur du même site vitrine, sans écran de chargement ni bascule de thème. Quatre pages, et un formulaire de contact qui passait par PHP et MySQL.                                               |
-| `Version PHP` | **Essai jamais terminé, jamais mis en place.** Une reprise des pages en PHP pour ajouter la commande en ligne (`panier.php`, `ajout_panier.php`). Abandonné, le site livré est resté statique.            |
-| `Test`        | Bac à sable, en marge. Contient `spider.html`, un essai d'animation d'araignées qui suivent le pointeur.                                                                                                 |
+| Dossier       | Ce que c'est                                                                                                                                                                                   |
+|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `Panada Food` | **Le site livré**, celui qui a tourné en ligne. Cinq pages, statique. Voir le détail plus bas.                                                                                                 |
+| `Site web`    | État antérieur du même site vitrine, sans écran de chargement ni bascule de thème. Quatre pages, et un formulaire de contact qui passait par PHP et MySQL.                                     |
+| `Version PHP` | **Essai jamais terminé, jamais mis en place.** Une reprise des pages en PHP pour ajouter la commande en ligne (`panier.php`, `ajout_panier.php`). Abandonné, le site livré est resté statique. |
+| `Test`        | Bac à sable, en marge. Contient `spider.html`, un essai d'animation d'araignées qui suivent le pointeur.                                                                                       |
 
 ## Le site livré
 
@@ -31,9 +31,9 @@ Cinq pages dans `Panada Food/HTML/` : `index.html` qui est l'écran de chargemen
 
 - **Aucune base de données.** Le formulaire de contact ouvre un `mailto:` vers l'adresse du
   restaurant. C'est pour cela qu'aucun dump SQL n'accompagne ce dossier.
-- **Cinq scripts** : `loader.js` (écran de chargement), `theme.js` (bascule clair / sombre,
-  105 lignes), `burger.js` (menu mobile), `zoom.js` (agrandissement des images), `cookies.js`
-  (bandeau de consentement).
+- **Cinq scripts** : `loader.js` (écran de chargement), `theme.js` (bascule clair / sombre),
+  `burger.js` (menu mobile), `zoom.js` (agrandissement des images), `cookies.js` (bandeau de
+  consentement).
 - **Huit feuilles de style**, une par page plus `footer.css` et `menu_nav.css`.
 - **37 images** : photos du comptoir et de la salle, visuels des catégories (burgers, tacos, pizzas,
   sandwichs), pictogrammes de services (halal, Wi-Fi, non-fumeur, moyens de paiement), QR code
@@ -41,7 +41,7 @@ Cinq pages dans `Panada Food/HTML/` : `index.html` qui est l'écran de chargemen
 
 **Dépendances externes, à connaître** : le site appelle Google Fonts (Permanent Marker, Rubik Mono
 One, Material Symbols) et `cdn.brandfetch.io` pour deux logos. Il ne fonctionne donc pas
-entièrement hors ligne, contrairement au portfolio qui n'a aucun appel tiers.
+entièrement hors ligne.
 
 ## La base de données des états antérieurs
 
@@ -61,7 +61,7 @@ polices et les deux logos distants, sinon ils tombent en repli.
 
 `Site web` s'ouvre aussi directement, sauf l'envoi du formulaire de contact, qui demande PHP, MySQL
 et la table `formulaire_contact` du dump. `Version PHP` demande PHP et MySQL pour tout, ses pages
-étant en PHP ; à lancer seulement pour voir à quoi ressemblait l'essai de commande en ligne, il
+étant en PHP. À lancer seulement pour voir à quoi ressemblait l'essai de commande en ligne, il
 n'est pas fini. `Test` est du HTML statique.
 
 Les `config.php` de `Site web` et `Version PHP` attendent `localhost`, l'utilisateur `root` et un
